@@ -1,3 +1,13 @@
 # Introduction To Computer Graphics
 
-Theoretical and practical materials for introduction to computer graphics: https://github.com/lorentzo/IntroductionToComputerGraphics/wiki
+### Lectures
+
+https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures
+
+### Projects
+
+https://github.com/lorentzo/IntroductionToComputerGraphics/wiki/Projects
+
+### Material
+
+https://github.com/lorentzo/IntroductionToComputerGraphics/wiki
