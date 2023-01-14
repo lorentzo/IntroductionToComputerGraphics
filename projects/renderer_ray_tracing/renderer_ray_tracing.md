@@ -19,7 +19,7 @@ Knowledge of one programming language, e.g.:
 
 ## Tasks
 
-### Main render loop.
+### Main rendering loop.
 
 The task of rendering engine is to create an image out of a 3D scene. To visualize results as soon as possible the first step of the project is to define output image. Colors of pixels will be calculated in next steps of the project.
 
