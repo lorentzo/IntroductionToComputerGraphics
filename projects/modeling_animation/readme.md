@@ -1,5 +1,5 @@
 
-# Blender: modeling, animation, rendering
+# Blender: 3D scene, modeling, animation and rendering
 
 ## Introduction
 

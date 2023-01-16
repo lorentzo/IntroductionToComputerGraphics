@@ -1,5 +1,5 @@
 
-# Ray-tracing based renderer
+# Ray-tracing based renderer from scratch
 
 ## Introduction
 

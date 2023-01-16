@@ -1,6 +1,6 @@
 
 
-# Three.js modeling, rendering, animation and interaction
+# Three.js: 3D scene, rendering, animation and interaction
 
 ## Introduction
 
