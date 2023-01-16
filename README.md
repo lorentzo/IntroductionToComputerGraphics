@@ -86,13 +86,13 @@ Foundational ingredients of 3D scene:
 
 ## Projects
 
-### Ray-tracing based rendering
+### Ray-tracing based rendering from scratch
 
 [Project task and guide](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/projects/renderer_ray_tracing)
 
-### Rasterization-based rendering: three.js
+### Rasterization-based rendering, animation and interaction in three.js
 
-[Project task and guide](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/projects/renderer_rasterization2)
+[Project task and guide](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/projects/renderer_rasterization)
 
 ### Modeling and animation in Blender
 

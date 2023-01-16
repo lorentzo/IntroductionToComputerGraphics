@@ -206,7 +206,7 @@ Tasks:
 2. Download/create object which will be used for instancing
 3. Use `MeshSurfaceSampler` to instance: https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
 
-## Post processing (Optional)
+### Post processing (Optional)
 
 Rendered image can be additionally enhanced using post-processing operations. Three.js defines EffectComposer which provides different post-processing operations:
 * https://threejs.org/docs/index.html#examples/en/postprocessing/EffectComposer
