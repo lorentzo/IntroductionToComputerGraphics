@@ -148,6 +148,11 @@ Movement of objects in 3D scene is often described with parametric curves:
 * Ideas: light positions can be also animated
 4. Render animation.
 
+### Animation 2 (Optional)
+
+1. Import premade animation: https://www.mixamo.com/
+2. Render animation
+
 ### Compositing (Optional)
 
 Images rendered from 3D scene are rarely directly used as final image. Post-processing of images is often done to introduce final image color:
@@ -160,4 +165,3 @@ Images rendered from 3D scene are rarely directly used as final image. Post-proc
 * https://docs.blender.org/manual/en/latest/compositing/types/filter/glare.html
 * https://docs.blender.org/manual/en/latest/compositing/types/filter/pixelate.html
 3. Store renders and document composting steps.
-

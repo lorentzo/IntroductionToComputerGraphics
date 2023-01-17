@@ -19,7 +19,7 @@ Directory `project/` contains basic structure needed for solving this project:
 
 threejs setup:
 1. Position your terminal to `project/` directory 
-2. In terminal type: `npm install --save three`
+2. In terminal type: `npm install --save three` (make sure to install `npm`)
 * This creates `node_modules/` directory in `project/` directory
   * Inside `project/node_modules/three/build/` directory contains core library files that we need to import.
   * Directory `project/node_modules/three/examples/` contains other useful imports, e.g., controls, loaders, post-processing, etc.

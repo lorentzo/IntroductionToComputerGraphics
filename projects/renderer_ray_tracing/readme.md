@@ -3,7 +3,9 @@
 
 ## Introduction
 
-The goal of this project is to write ray-tracing based rendering engine.
+The goal of this project is to write ray-tracing based renderer from scratch.
+
+This might be interesting for students into graphics programming and rendering pipelines. This knowledge can be applied on any computer graphics application since it is essential to any rendering system.
 
 Course lectures covering the topic:
 1. Rendering: introduction
@@ -11,22 +13,49 @@ Course lectures covering the topic:
 
 Based on: https://raytracing.github.io/
 
+Each task is covered with learning material. However, additional learning material can be useful:
+* https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-overview
+* https://www.pbr-book.org/3ed-2018/contents
+
 ## Prerequisites
 
-Knowledge of one programming language, e.g.:
+Knowledge of one programming language (writing and executing), e.g.:
 1. C++
 2. Python
 
+## Results (deliverables)
+
+1. Ray-tracing code
+2. Write Documentation: code, usage, project explanation, work process, developed methods, results, future work.
+3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
+
+## Outcomes
+
+1. Understanding fundamental elements of 3D scene and how are they used for rendering 
+2. Understanding rendering pipeline/process
+3. Understanding how 3D scene elements are represented: lights, cameras, objects
+
 ## Tasks
 
-### Main rendering loop.
+Contents:
+1. Main rendering loop
+2. Camera
+3. Objects: shape
+4. Enhancing camera and rendering loop
+5. Object material: diffuse and specular
+6. (Optional) Object material: transmission
+7. (Optional) Lights
+8. (Optional) Positioning and orienting camera
+9. (Optional) Animation
 
-The task of rendering engine is to create an image out of a 3D scene. To visualize results as soon as possible the first step of the project is to define output image. Colors of pixels will be calculated in next steps of the project.
+### 1. Main rendering loop
+
+The task of rendering engine is to create an image out of a 3D scene. Therefore, the basis for the rest of the project is to visualize results in form of an image. Thus, the first step of the project is to define output image. Colors of pixels will be calculated in next steps of the project for now, constant color can be used.
 
 Simplest image format is `PPM`, P3 version: https://netpbm.sourceforge.net/doc/ppm.html
 
 Steps:
-1. Create main function which will contain main rendering loop.
+1. Create main function where rendering loop will be placed.
 2. Define `image_height` and `image_width` variables for image dimensions.
 3. Create `PPM` image with defined image dimensions and fill all pixels with constant color (e.g., `(128, 64, 255)`) - simple rendering loop:
 ```
@@ -43,13 +72,17 @@ for (int j = image_height-1; j >= 0; --j)
 4. Write `PPM` image to standard output.
 5. Compile and run program by redirection output to file: e.g., `renderer.exe > image.ppm`.
 6. Open generated image and check results.
+7. Store code, results and document steps.
 
 Help: 
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 2: output image
 
-### Camera
+### 2. Camera
 
+To calculate the colors of pixels on image plane in virtual camera, we first need to calculate which objects are visible from camera - visibility problem.
+Ray-tracing is one solution to visbility problem.
 In ray-tracing, camera is used to generate camera/viewing/primary rays for each pixel of image in main rendering loop. Rays are sent to 3D scene and tested for intersections with objects.
+This way, visible objects are found and visibility problem is solved.
 
 Camera is used in main rendering loop to generated rays for each pixel of output image:
 ```
@@ -63,7 +96,7 @@ for (int j = image_height-1; j >= 0; --j)
 }
 ```
 
-To define rays and objects we need at least vectors and points.
+To define rays and objects we need at least to define vectors and points datatypes.
 
 Steps:
 1. Define `vector` class that can be used for representing vectors and points. Class `vector` must at least:
@@ -74,17 +107,7 @@ Steps:
 * Provide constructor accepting 2 vectors: origin and direction.
 * Utilities: position along ray given ray parameter t: `P(t) = origin + t * direction`
 3. Create camera class, which must at least:
-* Provide constructor that accepts camera parameters:
-    * Aspect ratio: `aspect_ratio = 16.0 / 9.0`
-    * Image width: `image_width = 480`
-    * Image height: `image_height = image_width / aspect_ratio` 
-    * Viewport height: `viewport_height = 2.0`
-    * Viewport width: `viewport_width = aspect_ratio * viewport_height`
-    * Focal length: `focal_length = 1.0`
-    * Origin: `origin = point3(0, 0, 0)`
-    * Horizontal: `horizontal = vec3(viewport_width, 0, 0)`
-    * Vertical: `vertical = vec3(0, viewport_height, 0)`
-    * lower_left_corner = origin - horizontal/2 - vertical/2 - vec3(0, 0, focal_length);
+* Provide constructor for accepting focal length and resolution parameters.
 * Provide function `get_ray(s,t)` which generates ray given pixel position.
 5. For each ray generate simple color which is assigned to pixel:
 ```
@@ -99,11 +122,12 @@ color ray_color(const ray& r) {
 Help:
 * Vectors: https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 3: The vec3 Class
 * Rays and camera: https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 4: Rays, a Simple Camera, and Background
+* Structuring camera class: https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 7: Antialiasing
 
 Notes:
 * For vectors and rays, linear algebra libraries such as https://github.com/g-truc/glm can be used.
 
-### Objects: shape
+### 3. Objects: shape
 
 Objects in 3D scene can be decoupled in shape and material. Shape property of an object is needed for intersection testing.
 
@@ -132,7 +156,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 6: Surface Normals and Multiple Objects
 
 
-### Enhancing camera rays and rendering
+### 4. Enhancing camera rays and rendering
 
 Rendered image in previous step contains object with jagged edges: aliasing.
 
@@ -146,7 +170,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 7: Antialiasing
 
 
-### Object material: diffuse and specular
+### 5. Object material: diffuse and specular
 
 Once object intersection is found we calculate color of the object - shading. Previous step gave flat looking object because shape normal wasn't used and material wasn't defined.
 
@@ -181,7 +205,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 9: Metal
 
 
-### (Optional) Object material: transmission
+### 6. (Optional) Object material: transmission
 
 Specular reflection is characteristic of metal materials. Diffuse reflection is characteristic of dielectric materials. Dielectric materials can also be transparent - transmissive. Light transmission happens with refracted ray.
 
@@ -197,8 +221,19 @@ Steps:
 Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 10: Dielectrics
 
+### 7. (Optional) Lights
 
-### (Optional) Positioning and orienting camera
+For now we have been using background color as light source. Similarly as object material can be diffuse, specular or transmissive, it can be also emissive.
+
+Steps:
+1. Create emissive material
+2. Add several objects (spheres) with emissive material with different intensities and colors.
+
+Help:
+* https://raytracing.github.io/books/RayTracingTheNextWeek.html. Chapter 7.1. Rectangles and Lights
+
+
+### 8. (Optional) Positioning and orienting camera
 
 Camera positioning and orienting is done using look-at method.
 Position where camera is placed is called `from`. Position where camera looks is called `at`. Orientation of camera on the line connecting `from` and `at` is defined with `up` vector.
@@ -208,7 +243,7 @@ Steps:
 2. Compute camera orientation using look-at elements.
 3. Add more spheres with different materials in scene and rendering from different angles.
 
-### (Optional) Animation
+### 9. (Optional) Animation
 
 To animate objects, time component needs to be introduced. 
 
