@@ -26,7 +26,7 @@ Knowledge of one programming language (writing and executing), e.g.:
 ## Results (deliverables)
 
 1. Ray-tracing code
-2. Write Documentation: code, usage, project explanation, work process, developed methods, results, future work.
+2. Write Documentation: code, renderered images, usage, project explanation, work process, developed methods, results, future work.
 3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
 
 ## Outcomes
@@ -56,23 +56,18 @@ Simplest image format is `PPM`, P3 version: https://netpbm.sourceforge.net/doc/p
 
 Steps:
 1. Create main function where rendering loop will be placed.
-2. Define `image_height` and `image_width` variables for image dimensions.
-3. Create `PPM` image with defined image dimensions and fill all pixels with constant color (e.g., `(128, 64, 255)`) - simple rendering loop:
+2. Create `PPM` image with defined image dimensions (`image_height` and `image_width`) and fill all pixels with constant color (e.g., `(128, 64, 255)`) - simple rendering loop:
 ```
 for (int j = image_height-1; j >= 0; --j) 
 {
     for (int i = 0; i < image_width; ++i) 
     {
-        r = 128;
-        g = 64;
-        b = 255;
+        image_color[i][j] = (128, 64, 255);
     }
 }
 ```
-4. Write `PPM` image to standard output.
-5. Compile and run program by redirection output to file: e.g., `renderer.exe > image.ppm`.
-6. Open generated image and check results.
-7. Store code, results and document steps.
+3. Compile and run program by redirection output to file: e.g., `renderer.exe > image.ppm`.
+4. Store code, resulting image and document steps.
 
 Help: 
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 2: output image
@@ -91,7 +86,7 @@ for (int j = image_height-1; j >= 0; --j)
     for (int i = 0; i < image_width; ++i) 
     {
         ray = camera.get_ray(i,j);
-        ray_color(ray);
+        image_color[i][j] = ray_color(ray);
     }
 }
 ```
@@ -107,17 +102,17 @@ Steps:
 * Provide constructor accepting 2 vectors: origin and direction.
 * Utilities: position along ray given ray parameter t: `P(t) = origin + t * direction`
 3. Create camera class, which must at least:
-* Provide constructor for accepting focal length and resolution parameters.
+* Provide constructor for accepting `focal length` and `resolution` parameters.
 * Provide function `get_ray(s,t)` which generates ray given pixel position.
-5. For each ray generate simple color which is assigned to pixel:
+5. Each ray will be used for computing color which is assigned to pixel from which ray is generated. Function which calculates color using ray `ray_color()` can be set to following for now (since there is not objects in the scene that ray would intersect and use for color calculation): 
 ```
-color ray_color(const ray& r) {
-    vec3 unit_direction = unit_vector(r.direction());
-    auto t = 0.5*(unit_direction.y() + 1.0);
+color ray_color(r) {
+    vec3 unit_direction = normalize(r.direction());
+    auto t = 0.5*(unit_direction.y + 1.0);
     return (1.0-t)*color(1.0, 1.0, 1.0) + t*color(0.5, 0.7, 1.0);
 }
 ```
-6. Run program and store the image.
+6. Run program, store the image, document steps.
 
 Help:
 * Vectors: https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 3: The vec3 Class
@@ -129,9 +124,9 @@ Notes:
 
 ### 3. Objects: shape
 
-Objects in 3D scene can be decoupled in shape and material. Shape property of an object is needed for intersection testing.
+Objects in 3D scene can be decoupled in shape and material. Shape property of an object is needed for ray-object intersection testing.
 
-Most important information that is obtained by intersection testing is intersection point and normal in intersection point. This information is called intersection context.
+Most important information that is obtained by intersection testing is intersection point and normal in intersection point. This and other information in intersection point is called intersection context.
 
 Simplest object shape that can be tested for intersection is a sphere. Sphere can be analytically defined with origin `(cx,cy,cz)` (vector) and radius `R` (float): `(x-cx)^2 + (y-cy)^2 + (z-cz)^2 = R^2`.
 
@@ -141,15 +136,13 @@ Otherwise: `(x-cx)^2 + (y-cy)^2 + (z-cz)^2 > R^2`
 Ray equation `P(t) = ray_origin + t * ray_direction` is combined with sphere equation for analytic solution.
 
 Steps:
-1. Create `hit_sphere()` function which accepts sphere `center`, `radius` and `ray`
-2. Inside `hit_sphere()` calculate if `ray` hits sphere
-3. If `ray` hits the sphere then calculate point of intersection.
-4. If ray hits the sphere then calculate normal in intersection point
-5. `hit_sphere()` returns the information if ray hits the sphere and intersection context: intersection point, normal sphere color.
-6. Create Sphere `class` which contains sphere information: origin and radius as well `hit_sphere()` function.
-7. Create at least 5 spheres with different positions and sizes in 3D scene visible to camera. This list of spheres will represent objects in 3D scene.
-8. For every camera ray, test for intersection all sphere objects in 3D scene. If ray intersects sphere object, assign sphere color to pixel for which this ray is generated.
-9. Run the program and store image.
+1. Create Sphere `class` which defines constructor accepting sphere information: `origin` and `radius` and `color`.
+2. Add `hit_sphere()` function to Sphere class which accepts `ray` and  calculates if `ray` hits sphere.
+- If `ray` hits the sphere then calculate point of intersection and normal in intersection.
+- `hit_sphere()` returns the information if ray hits the sphere and intersection context: intersection point, normal in intersection point and sphere color.
+3. Create at least 5 spheres with different positions, sizes and colors in 3D scene visible to camera. This list of spheres will represent objects in 3D scene.
+4. For every camera ray, test for intersection all sphere objects in 3D scene. If ray intersects sphere object, assign sphere color to pixel for which this ray is generated.
+5. Run the program, store image and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 5: Adding a Sphere
@@ -164,7 +157,7 @@ To solve problem with aliasing multiple rays per pixel are generated.
 
 Steps:
 1. For each pixel in image, generate multiple rays which are randomly positioned on pixel area.
-2. Render images with 1, 2, 4, 8 and 16 rays per pixel and compare.
+2. Render images with 1, 2, 4, 8 and 16 rays per pixel. Store images and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 7: Antialiasing
@@ -191,14 +184,15 @@ Material, as shape, is property of a object, in this case sphere.
 Steps:
 1. Create diffuse material class which must at least:
 * Provide constructor accepting albedo - color (r,g,b)
-* Function `scatter()` which accepts ray and intersection context and calculates scattered ray direction and color.
+* Provide function `scatter()` which accepts ray and intersection context and calculates scattered ray direction and color.
 2. Create specular material class which must at least:
 * Provide constructor accepting reflectance - color (r,g,b)
-* Function `scatter()` which accepts ray and intersection context and calculates scattered ray direction and color.
+* Provide function `scatter()` which accepts ray and intersection context and calculates scattered ray direction and color.
 3. Extend Sphere class with material variable.
-4. Define recursion limit. 
-5. Assign diffuse material with different colors and specular material with different color to spheres in 3D scene.
-3. Render images with 1, 2, 4, 8 and 16 recursion limit.
+4. Use material information to compute color when ray intersects the sphere object.
+5. Define recursion limit. 
+6. Assign diffuse material with different colors and specular material with different color to spheres in 3D scene.
+7. Render images with 1, 2, 4, 8 and 16 recursion limit. Store images and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 8: Diffuse Materials
@@ -207,7 +201,7 @@ Help:
 
 ### 6. (Optional) Object material: transmission
 
-Specular reflection is characteristic of metal materials. Diffuse reflection is characteristic of dielectric materials. Dielectric materials can also be transparent - transmissive. Light transmission happens with refracted ray.
+Specular reflection is characteristic of metal materials. Diffuse reflection is characteristic of dielectric materials. Dielectric materials can also be transparent - transmissive. Light transmission happens when light ray refracts into surface, travels and exits surface again refracting.
 
 To determine refraction angle Snell's law is used. To determined amout of relfection and refraction Fresnel equations, that is, Schlick approximation is used with index of refraction (IOR): https://pixelandpoly.com/ior.html
 
@@ -216,7 +210,8 @@ Steps:
 * Provide constructor accepting IOR
 * Provide `scatter()` function which accept ray and intersection context computing refracted and reflected direction.
 2. Add transmissive material with different parameters to objects in scene.
-3. Render image.
+3. Use transmissive material to compute color when ray intersects the sphere object.
+4. Render image, store code and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 10: Dielectrics
@@ -228,6 +223,8 @@ For now we have been using background color as light source. Similarly as object
 Steps:
 1. Create emissive material
 2. Add several objects (spheres) with emissive material with different intensities and colors.
+3. Render scene with color computation using emissive material.
+4. Render image and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingTheNextWeek.html. Chapter 7.1. Rectangles and Lights
@@ -241,18 +238,19 @@ Position where camera is placed is called `from`. Position where camera looks is
 Steps:
 1. Extend camera class constructor to accept look-at elements: `from`, `at` and `up`.
 2. Compute camera orientation using look-at elements.
-3. Add more spheres with different materials in scene and rendering from different angles.
+3. Add more spheres with different materials in scene.
+4. Render images with different camera positions. Store images and document steps.
 
 ### 9. (Optional) Animation
 
-To animate objects, time component needs to be introduced. 
+To animate objects,  time component needs to be introduced. 
 
 Steps:
 1. Add `time` variable to ray class
 2. Add `time1` and `time2` variables to camera class designating time in which ray can be generated.
 3. Add `move()` function in sphere class which accepts time and calculates sphere center position. Simple example is linear interpolation between two points for given time.
 4. Update sphere `hit()` function to use sphere position which is calculated using `move()` function.
-5. Render animation.
+5. Render animation. Store animation and document steps.
 
 Help:
 * https://raytracing.github.io/books/RayTracingTheNextWeek.html, chapter 2: Motion Blur
