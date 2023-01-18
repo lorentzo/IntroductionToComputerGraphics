@@ -165,3 +165,9 @@ Images rendered from 3D scene are rarely directly used as final image. Post-proc
 * https://docs.blender.org/manual/en/latest/compositing/types/filter/glare.html
 * https://docs.blender.org/manual/en/latest/compositing/types/filter/pixelate.html
 3. Store renders and document composting steps.
+
+### Python programming (Optional)
+TODO
+
+### Geometry nodes (Optional)
+TOOD
