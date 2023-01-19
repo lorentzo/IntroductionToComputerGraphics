@@ -7,17 +7,48 @@ Blender is open-source tool for 3D modeling, animation, rendering and more.
 
 The goal of this project is:
 * Get familiar with Blender 3D scene elements: objects, lights and cameras
+* Importing and exporting 3D scene
 * Get familiar with Blender rendering: EEVEE (rasterization-based renderer) and Cycles (ray-tracing based renderer)
 * Get familiar with animation
+* Give foundations to digital content creation workflow
 
 ## Prerequistes
 
-Blender: https://www.blender.org/
+Download blender: https://www.blender.org/
 
 Blender offers many options and thus might be overwhelming. Therefore, starting with simple introductory tutorials will make things much more clearer:
 * https://www.youtube.com/watch?v=tV1ajY2059g&ab_channel=Dansky
 
-## Project
+## Outcomes
+
+1. Obtaining foundamental knowledge of digital content creation (DCC) tool
+2. Understanding 3D scene elements in DCC
+3. Basics of 3D modeling
+4. Importing and exporting workflows
+5. Material and texture modeling
+
+## Deliverables
+
+1. Blender files from each task
+2. Documentation of whole process explaining what has been done and how (performed steps) and resulting images
+3. Upload Blender files and documentation to any cloud service (e.g., Google Disk)
+* If you are interested, you can show your work on popular 3D art sites such as: https://sketchfab.com/ and https://www.artstation.com/. Note: if you are using 3rd party models or data, make sure that licence permits usage and it is nice to cite the sources of models in the description.
+4. Send cloud repository link (or 3D art site link) at latest on 8.4.2022.
+
+## Tasks
+
+1. Objects, lights, camera and render!
+2. Editing objects
+3. Modeling objects
+4. Enhancing lights
+5. Instancing (Optional)
+6. Camera FX (Optional)
+7. Animation (Optional)
+8. Animation 2 (Optional)
+9. Compositing (Optional)
+10. Python programming (Optional)
+11. Geometry nodes (Optional)
+
 
 ### Objects, lights, camera and render!
 
@@ -58,6 +89,7 @@ Material consists of two main parts:
   * Image texture: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/image.html
   * Procedural texture: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/voronoi.html
 
+Steps:
 1. Duplicate one or more objects from previous task.
 2. Create new material for duplicated object:
 *  Create scattering function: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
@@ -67,9 +99,10 @@ Material consists of two main parts:
 
 Sometimes image textures are hard to place on complex shape. In this case, procedural texturing can help.
 
+Steps:
 1. Duplicate one or more objects from previous task.
 2. Create new material for duplicated object:
-*  Create scattering function: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
+* Create scattering function: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
 * Use procedural texture for as material texture: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/voronoi.html
 3. Place new material and render.
 

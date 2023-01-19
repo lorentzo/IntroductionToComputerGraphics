@@ -46,7 +46,30 @@ More information on three.js
 * https://threejs.org/docs/#manual/en/introduction/Useful-links
 * https://discourse.threejs.org/t/three-js-bookshelf/2468/3
 
-## Task
+## Outcomes
+
+1. Getting familiar with 3D interactive library
+2. Understanding 3D scene elements: objects, lights and cameras in practice
+3. Foundations of interaction
+
+## Deliverables
+
+1. JavaScript, HTML and CSS code needed for running the project
+2. Documentation explaining what has been done and how, accompanied with images
+3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
+4. Share the link of Git host at latest on 8.4.2022.
+
+## Tasks
+
+1. Getting familiar with three.js
+2. More interesting objects
+3. Ehnacing lights
+4. Adding rendering loop
+5. Interaction
+6. Adding environment (Optional)
+7. Animated objects (Optional)
+8. Instancing (Optional)
+9. Post processing (Optional)
 
 ### Getting familiar with three.js
 
@@ -72,7 +95,6 @@ For defining objects in 3D scene Threejs is using `Mesh` object. `Mesh` object r
 Threejs defines `Light` object for emitting light in specific direction, position, color and intensity. One type of light is `DirectionalLight` which emitts light in specific direction, color and intensity.
 * `Light` object: https://threejs.org/docs/index.html#api/en/lights/Light
 * `DirectionalLight`object: https://threejs.org/docs/#api/en/lights/DirectionalLight
-
 
 Tasks:
 1. Create `scene` object.

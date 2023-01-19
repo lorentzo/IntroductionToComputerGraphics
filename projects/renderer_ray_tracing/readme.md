@@ -23,17 +23,17 @@ Knowledge of one programming language (writing and executing), e.g.:
 1. C++
 2. Python
 
-## Results (deliverables)
-
-1. Ray-tracing code
-2. Write Documentation: code, renderered images, usage, project explanation, work process, developed methods, results, future work.
-3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
-
 ## Outcomes
 
 1. Understanding fundamental elements of 3D scene and how are they used for rendering 
 2. Understanding rendering pipeline/process
 3. Understanding how 3D scene elements are represented: lights, cameras, objects
+
+## Deliverables
+
+1. Ray-tracing code
+2. Write Documentation: code, renderered images, usage, project explanation, work process, developed methods, results, future work.
+3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
 
 ## Tasks
 
