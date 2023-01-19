@@ -9,6 +9,7 @@
 * About the course.
 
 [Introduction lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/1_introduction)
+[Introduction lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/1_introduction)
 
 ### 2. Overview of image generation
 
@@ -18,6 +19,7 @@ Ingredients of image generation process:
 * Display device: raster image
 
 [Overview of image generation lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/2_overview_computer_image_generation)
+[Overview of image generation lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/2_overview_computer_image_generation)
 
 ### 3. 3D scene overview
 
