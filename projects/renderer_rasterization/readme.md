@@ -2,13 +2,15 @@
 
 # Three.js: 3D scene, rendering, animation and interaction
 
+## NOTE: Project description is under work, it will get updated!
+
 ## Introduction
 
 Three.js (https://threejs.org/) is lightweight, cross-browser, general purpose 3D library using WebGL for rendering.
 
 WebGL je Graphics library just like OpenGL but aimed for graphics in web browsers.
 
-WebGL and OpenGL are rasterization-based rendering engines.
+WebGL and OpenGL are rasterization-based rendering approaches.
 
 ## Prerequistes
 
@@ -17,7 +19,7 @@ Directory `project/` contains basic structure needed for solving this project:
 * `project/css/style.css` - contains css style. No need to change for this project.
 * `project/index.html` - contains html with javascript code as main element. No need to change for this project.
 
-threejs setup:
+three.js setup:
 1. Position your terminal to `project/` directory 
 2. In terminal type: `npm install --save three` (make sure to install `npm`)
 * This creates `node_modules/` directory in `project/` directory
@@ -50,30 +52,36 @@ More information on three.js
 
 1. Getting familiar with 3D interactive library
 2. Understanding 3D scene elements: objects, lights and cameras in practice
-3. Foundations of interaction
+3. Foundations of interaction and animation
 
 ## Deliverables
 
-1. JavaScript, HTML and CSS code needed for running the project
-2. Documentation explaining what has been done and how, accompanied with images
-3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
-4. Share the link of Git host at latest on 8.4.2022.
+1. JavaScript, HTML and CSS code needed for running the project as well as used objects and 3D modeling tool projects (if objects have been created using those).
+2. Documentation explaining what has been done and how, accompanied with resulting images
+3. Upload your code, documentation and results on any Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
+4. Share the link of Git host at latest on 8.4.2023.
 
-## Tasks
+## Tasks and grading
 
 1. Getting familiar with three.js
-2. More interesting objects
-3. Ehnacing lights
-4. Adding rendering loop
-5. Interaction
-6. Adding environment (Optional)
-7. Animated objects (Optional)
-8. Instancing (Optional)
-9. Post processing (Optional)
+2. Adding rendering loop
+3. Interaction
+4. More interesting objects
+5. Adding environment (Optional)
+6. Animated objects (Optional)
+7. Instancing (Optional)
+8. Post processing (Optional)
 
-### Getting familiar with three.js
+Grading:
+* Required tasks (TODO) must be solved and in total result in 75 points.
+* Optional tasks (TODO) are optional and each bring 25 points. These tasks are for those who want to do more and/or have more project points.
+* Maximum number of points is 100
 
-Threejs defines `Scene` which contains all that we can see. It defines `world space` coordinate system. Adding objects to `scene` creates a `scene graph`.
+## Project tasks
+
+### 1. Getting familiar with three.js
+
+Three.js defines `Scene` which contains all that we can see. It defines `world space` coordinate system. Adding objects to `scene` creates a `scene graph`.
 * `Scene` object: https://threejs.org/docs/#api/en/scenes/Scene
 
 To view scene from particular position Threejs defines `Camera`, specifically, `PerspectiveCamera` object.
@@ -81,11 +89,11 @@ To view scene from particular position Threejs defines `Camera`, specifically, `
 * `PerspectiveCamera` object: https://threejs.org/docs/#api/en/cameras/PerspectiveCamera
 
 
-For rendering three.js uses `Renderer` object. To render a scene based on WebGL Threejs is using `WebGLRenderer` object.
+For rendering three.js uses `Renderer` object. To render a scene based on WebGL Three.js is using `WebGLRenderer` object.
 * `Renderer` object: https://threejs.org/docs/#api/en/constants/Renderer
 * `WebGLRenderer` object: https://threejs.org/docs/#api/en/renderers/WebGLRenderer
 
-For defining objects in 3D scene Threejs is using `Mesh` object. `Mesh` object requires geometry and material. Geometry is generally defined using `BufferGeometry`. One type of bult-in geometry is `BoxGeometry`. Threejs defines `Material` object for desribing material. One type is `MeshLambertMaterial` object.
+For defining objects in 3D scene Three.js is using `Mesh` object. `Mesh` object requires geometry and material. Geometry is generally defined using `BufferGeometry`. One type of bult-in geometry is `BoxGeometry`. Three.js defines `Material` object for desribing material. One type is `MeshLambertMaterial` object.
 * `Mesh` object: https://threejs.org/docs/#api/en/objects/Mesh
 * `Buffer geometry` object: https://threejs.org/docs/#api/en/core/BufferGeometry
 * `BoxGeometry` object: https://threejs.org/docs/#api/en/geometries/BoxGeometry
@@ -95,68 +103,31 @@ For defining objects in 3D scene Threejs is using `Mesh` object. `Mesh` object r
 Threejs defines `Light` object for emitting light in specific direction, position, color and intensity. One type of light is `DirectionalLight` which emitts light in specific direction, color and intensity.
 * `Light` object: https://threejs.org/docs/index.html#api/en/lights/Light
 * `DirectionalLight`object: https://threejs.org/docs/#api/en/lights/DirectionalLight
+* `HemisphereLight`: https://threejs.org/docs/index.html#api/en/lights/HemisphereLight
+* `PointLight`: https://threejs.org/docs/index.html#api/en/lights/PointLight
+* `RectAreaLight`: https://threejs.org/docs/index.html#api/en/lights/RectAreaLight
+* `SpotLight`: https://threejs.org/docs/index.html#api/en/lights/SpotLight
 
 Tasks:
 1. Create `scene` object.
 2. Create `PerspectiveCamera` object.
 3. Create `WebGLRenderer` object.
-4. Create `light` objects:
+4. Create `light` objects, at least:
 * Directional light
 * Ambient light
-5. Create several `Mesh` object with different geometries, materials and placement, visible to the camera e.g.:
+5. Create several (at least 5) basic `Mesh` objects with different geometries, materials and placement, visible to the camera e.g.:
 * `CapsuleGeometry` and `MeshLambertMaterial`
 * `ConeGeometry` `MeshStandardMaterial`
-6. Render the scene, store images, document steps.
+6. Store code, render the scene, store images, document steps.
 
 Help:
+* https://threejs.org/manual/#en/fundamentals
 * https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
 * https://discoverthreejs.com/book/first-steps/first-scene/
 * https://discoverthreejs.com/book/first-steps/physically-based-rendering/
 * https://aerotwist.com/tutorials/getting-started-with-three-js/
 
-### More interesting objects
-
-Threejs supports basic geometry such as box, sphere, cone, etc. To make 3D scene more interesting, more complex geometry is often created using 3D modeling tools (e.g., Blender, Maya, 3DS Max, Houdini). 
-
-Blender is open-source 3D modeling tool which can be used for creating complex object and materials. There are many resources to learn basics of modeling. A good starting point is this tutorial: https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD
-
-More complex 3D models can be found in various online repositories, e.g.:
-* https://polyhaven.com/models
-* https://casual-effects.com/data/index.html
-* http://graphics.stanford.edu/data/3Dscanrep/
-* https://developer.nvidia.com/orca
-* https://www.realtimerendering.com/portal.html
-
-To import more complex objects, Threejs offers several importers:
-* https://threejs.org/docs/#examples/en/loaders/GLTFLoader
-* https://threejs.org/docs/#examples/en/loaders/OBJLoader
-
-Tasks:
-1. Create simple object in Blender, export it and import to Three.js
-2. Download at least two objects from online repositories and import to Three.js
-3. Create simple scene with imported objects
-4. Render, store images, code and models. Document performed steps.
-
-Help:
-* https://threejs.org/docs/#manual/en/introduction/Loading-3D-models
-* https://discoverthreejs.com/book/first-steps/load-models/
-
-
-### Ehnacing lights
-
-Directional and ambient lights are simplest light sources. Other types of light sources may be used.
-
-Tasks:
-1. Add `HemisphereLight`: https://threejs.org/docs/index.html#api/en/lights/HemisphereLight
-2. Render and store image
-3. Add `PointLight`: https://threejs.org/docs/index.html#api/en/lights/PointLight
-4. Render and store image
-5. Add `RectAreaLight`: https://threejs.org/docs/index.html#api/en/lights/RectAreaLight
-6. Render and store image
-7. Add `SpotLight`: https://threejs.org/docs/index.html#api/en/lights/SpotLight
-8. Render and store image
-
-### Adding rendering loop
+### 2. Adding rendering loop
 
 Interactive applications (e.g., games) contain rendering loop (e.g., game loop) which is running rendering command in a loop creating certain amount if images - frames per second.
 
@@ -177,9 +148,10 @@ animate();
 ```
 
 Tasks:
-1. Add rendering loop using `requestAnimationFrame()` function
-2. Test animation using by rotating all objects in the scene e.g., `my_object.rotation.x += 0.01;` 
+1. Add rendering loop to existing project using `requestAnimationFrame()` function
+2. Create animation using by translating, scaling and rotating all objects in the scene e.g., `my_object.rotation.x += 0.01;` 
 * More on rotation: https://threejs.org/docs/#api/en/core/Object3D.rotation
+3. Store code, render the scene (few screenshots of animation is enough), store images, document steps.
 
 Help:
 * https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
@@ -187,16 +159,46 @@ Help:
 More information:
 * https://discoverthreejs.com/book/first-steps/animation-loop/
 
+### 3. Interaction
 
-### Interaction
-
-Threejs enables moving camera in the scene using `Controls`. It requires camera which is moved and `HTMLDOMElement`. Example:
+Three.js enables moving camera in the scene using `Controls` object. `Control` operates on camera which is used for rendering:
 * https://threejs.org/docs/#examples/en/controls/FlyControls
+* https://threejs.org/docs/#examples/en/controls/FirstPersonControls
+* https://threejs.org/docs/#examples/en/controls/OrbitControls
 
 Tasks:
-1. Add `FlyControls` to camera. 
+1. Add `Control` of your choice to camera.
+2. Store code, render the scene (few screenshots from different camera positions is enough), store images, document steps. 
 
-### Adding environment (Optional)
+### 4. More interesting objects
+
+Three.js supports basic geometry such as box, sphere, cone, etc. To make 3D scene more interesting, more complex geometry is often created using 3D modeling tools (e.g., Blender, Maya, 3DS Max, Houdini). 
+
+Blender is open-source 3D modeling tool which can be used for creating complex object and materials. There are many resources to learn basics of modeling. A good starting point is this tutorial: https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD
+
+More complex 3D models can be found in various online repositories, e.g.:
+* https://polyhaven.com/models
+* https://casual-effects.com/data/index.html
+* http://graphics.stanford.edu/data/3Dscanrep/
+* https://developer.nvidia.com/orca
+* https://www.realtimerendering.com/portal.html
+
+To import more complex objects, Three.js offers several importers:
+* https://threejs.org/docs/#examples/en/loaders/GLTFLoader
+* https://threejs.org/docs/#examples/en/loaders/OBJLoader
+
+Tasks:
+1. Model simple object in Blender, export it and import to Three.js
+2. Download at least two objects from online repositories and import to Three.js
+3. Add created and downloaded objects to existing scene. Place object around the scene to your liking.
+4. Render 3D scene, store images (screenshots of rendered image is enough), code, used objects and 3D modeling tool project where object was created. Document performed steps.
+
+Help:
+* https://threejs.org/docs/#manual/en/introduction/Loading-3D-models
+* https://discoverthreejs.com/book/first-steps/load-models/
+
+
+### 5. Adding environment (Optional)
 
 So far, even with present lights, scene has uniform background (environment) color. 
 
@@ -207,7 +209,7 @@ Tasks:
 2. Download HDRI image from PolyHaven: https://polyhaven.com/hdris
 3. Add HRDI `PMREMGenerator` using: https://threejs.org/docs/index.html#api/en/extras/PMREMGenerator
 
-### Animated objects (Optional)
+### 6. Animated objects (Optional)
 
 Tasks:
 1. Get familiar with three.js object animation: 
@@ -218,7 +220,7 @@ Tasks:
 Help: 
 * https://discoverthreejs.com/book/first-steps/animation-system/
 
-### Instancing (Optional)
+### 7. Instancing (Optional)
 
 Having lots of geometry in scene is expensive. To solve this problem, instancing can be used. The idea is to use the same mesh data with different transformation matrices. Example:
 * https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
@@ -228,7 +230,7 @@ Tasks:
 2. Download/create object which will be used for instancing
 3. Use `MeshSurfaceSampler` to instance: https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
 
-### Post processing (Optional)
+### 8. Post processing (Optional)
 
 Rendered image can be additionally enhanced using post-processing operations. Three.js defines EffectComposer which provides different post-processing operations:
 * https://threejs.org/docs/index.html#examples/en/postprocessing/EffectComposer

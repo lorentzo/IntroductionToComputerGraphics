@@ -1,6 +1,8 @@
 
 # Ray-tracing based renderer from scratch
 
+## NOTE: Project description is under work, it will get updated!
+
 ## Introduction
 
 The goal of this project is to write ray-tracing based renderer from scratch.
@@ -34,8 +36,9 @@ Knowledge of one programming language (writing and executing), e.g.:
 1. Ray-tracing code
 2. Write Documentation: code, renderered images, usage, project explanation, work process, developed methods, results, future work.
 3. Upload your code, documentation and results on Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
+4. Send link to Git host at latest on 8.4.2023.
 
-## Tasks
+## Tasks and grading
 
 Contents:
 1. Main rendering loop
@@ -47,6 +50,13 @@ Contents:
 7. (Optional) Lights
 8. (Optional) Positioning and orienting camera
 9. (Optional) Animation
+
+Grading:
+* Required tasks (TODO) must be solved and in total result in 75 points.
+* Optional tasks (TODO) are optional and each bring 25 points. These tasks are for those who want to do more and/or have more project points.
+* Maximum number of points is 100
+
+## Project tasks
 
 ### 1. Main rendering loop
 
