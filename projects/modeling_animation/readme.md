@@ -42,7 +42,7 @@ Blender offers many options and thus might be overwhelming. Therefore, starting 
 
 Grading:
 * Tasks: 1-4 are foundations and in total result in 75 points.
-* Tasks: 4-9 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-4 should be solved before for understanding the basics. These tasks are for those who want to do more and/or have more project points.
+* Tasks: 4-9 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-4 should be solved before to understand foundations. These tasks are for those who want to do more and/or have more project points.
 * Maximum number of points is 100
 
 ## Deliverables
@@ -75,6 +75,7 @@ Steps:
 1. Create new Blender project.
 2. Download several (at least 3) models from some of online 3D models libraries:
     * https://polyhaven.com/models
+    * https://sketchfab.com/
     * https://casual-effects.com/data/index.html
     * http://graphics.stanford.edu/data/3Dscanrep/
     * https://developer.nvidia.com/orca
@@ -123,6 +124,7 @@ Steps:
 1. Create new Blender project.
 2. Download model from some of online 3D models libraries:
     * https://polyhaven.com/models
+    * https://sketchfab.com/
     * https://casual-effects.com/data/index.html
     * http://graphics.stanford.edu/data/3Dscanrep/
     * https://developer.nvidia.com/orca
@@ -142,6 +144,7 @@ Sometimes image textures are hard to place on complex shapes. In this case, proc
 Steps:
 1. Download and import additional model in existing scene from some of online 3D models libraries:
     * https://polyhaven.com/models
+    * https://sketchfab.com/
     * https://casual-effects.com/data/index.html
     * http://graphics.stanford.edu/data/3Dscanrep/
     * https://developer.nvidia.com/orca
@@ -187,6 +190,7 @@ Steps:
     * https://www.youtube.com/watch?v=CBJp82tlR3M&ab_channel=RyanKingArt
 3. Download and import additional model in existing scene from some of online 3D models libraries:
     * https://polyhaven.com/models
+    * https://sketchfab.com/
     * https://casual-effects.com/data/index.html
     * http://graphics.stanford.edu/data/3Dscanrep/
     * https://developer.nvidia.com/orca
