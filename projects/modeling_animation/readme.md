@@ -1,18 +1,11 @@
 
 # Blender: 3D scene, modeling, animation and rendering
 
-## NOTE: Project description is under work, it will get updated!
-
 ## Introduction
 
 Blender is open-source tool for 3D modeling, animation, rendering and more.
 
-The goal of this project is:
-* Get familiar with Blender 3D scene elements: objects, lights and cameras
-* Importing 3rd party elements in 3D scene
-* Get familiar with Blender rendering: EEVEE (rasterization-based renderer) and Cycles (ray-tracing based renderer)
-* Get familiar with animation
-* Give foundations to digital content creation workflow
+The goal of this project is get familiar with digital content creation and manipulation using 3D modeling tool: Blender
 
 ## Prerequisites
 
@@ -24,11 +17,15 @@ Blender offers many options and thus might be overwhelming. Therefore, starting 
 ## Outcomes
 
 1. Obtaining fundamental knowledge of digital content creation (DCC) tool
-2. Understanding 3D scene elements in DCC tools.
-3. Basics of 3D modeling (manually, programming and visual programming)
-4. Importing object workflows
-5. Material and texture modeling
-6. Basics of animation
+2. Understanding 3D scene elements in DCC tools: objects, lights and cameras
+3. Understanding foundations of rendering in DCC tools: ray-tracing based and rasterization-based
+4. Basics of 3D modeling (manually, programming and visual programming)
+5. Importing object workflows
+6. Material and texture modeling
+7. Basics of animation
+8. (Optional) Basics of character and physical simulation
+9. (Optional) Basics of particle systems
+10. (Optional) Basics of procedural geometry manipulation
 
 ## Tasks and grading
 
@@ -36,27 +33,30 @@ Blender offers many options and thus might be overwhelming. Therefore, starting 
 2. Editing objects: materials (20 points)
 3. Modeling objects (20 points)
 4. Animation basics (20 points)
-5. (Optional) Physical simulation (25 points)
-6. (Optional) Instancing (25 points)
-7. (Optional) Character animation (25 points)
-8. (Optional) Using 3rd party rendering engines (25 points)
-9. (Optional) Python programming (25 points)
-10. (Optional) Geometry nodes (25 points)
+5. (Optional) Physical simulation (30 points)
+6. (Optional) Instancing (30 points)
+7. (Optional) Character animation (30 points)
+8. (Optional) Using 3rd party rendering engines (30 points)
+9. (Optional) Python programming (30 points)
+10. (Optional) Geometry nodes (30 points)
 
 Grading:
-* Tasks: 1-4 must be solved and in total result in 75 points.
-* Tasks: 4-9 are optional and each bring 25 points. These tasks are for those who want to do more and/or have more project points.
+* Tasks: 1-4 are foundations and in total result in 75 points.
+* Tasks: 4-9 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-4 should be solved before for understanding the basics. These tasks are for those who want to do more and/or have more project points.
 * Maximum number of points is 100
 
 ## Deliverables
 
-1. Blender files and rendered results (image or animation) for each task
-2. Documentation for each task explaining what has been done and how (performed steps) and resulting images
+For successful project submission it is required to:
+1. Create Blender files and rendered results (image or animation) for each task
+2. Write Documentation for each task explaining what has been done and how (performed steps) and resulting images
 3. Upload Blender files and documentation to any cloud service (e.g., Google Disk)
-* If you are interested, you can show your work on popular 3D art sites such as: https://sketchfab.com/ and https://www.artstation.com/. Note: if you are using 3rd party models or data, make sure that licence permits usage and it is nice to cite the sources of models that you are using in the description.
-4. Send cloud repository link (or 3D art site link) at latest on 8.4.2023.
+   * If you are interested, you can show your work on popular 3D art sites such as: https://sketchfab.com/ or https://www.artstation.com/. Note: if you are using 3rd party models or data, make sure that licence permits usage. Also, it is nice to cite the sources of models that you are using in the description.
+4. Send cloud repository link (or 3D art site link) at latest on **8.4.2023.**
 
 ## Project tasks
+
+NOTE: project tasks leave space for you to play and investigate. Therefore, it is up to you how you solve the tasks. The main point is that you cover the main requirements.
 
 ### 1. Objects, lights, camera and render!
 
@@ -74,21 +74,21 @@ After 3D scene is created, rendering can take place:
 Steps:
 1. Create new Blender project.
 2. Download several (at least 3) models from some of online 3D models libraries:
-* https://polyhaven.com/models
-* https://casual-effects.com/data/index.html
-* http://graphics.stanford.edu/data/3Dscanrep/
-* https://developer.nvidia.com/orca
-* https://www.realtimerendering.com/portal.html
+    * https://polyhaven.com/models
+    * https://casual-effects.com/data/index.html
+    * http://graphics.stanford.edu/data/3Dscanrep/
+    * https://developer.nvidia.com/orca
+    * https://www.realtimerendering.com/portal.html
 3. Import models to Blender. Place objects to form simple scene.
 4. Add lights to the scene. Add at least:
-* Environment light: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/environment.html
-  * Use HRDI image for environment node input: https://polyhaven.com/hdris
-* Non-physical light: https://docs.blender.org/manual/en/latest/render/lights/light_object.html
-* Emissive object (3D model with emissive material): https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/emission.html
-  * For shape of emissive object, "Mesh Extra Objects" addon can be used: https://docs.blender.org/manual/en/latest/addons/add_mesh/mesh_extra_objects.html
+    * Environment light: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/environment.html
+      * Use HRDI image for environment node input: https://polyhaven.com/hdris
+    * Non-physical light: https://docs.blender.org/manual/en/latest/render/lights/light_object.html
+    * Emissive object (3D model with emissive material): https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/emission.html
+      * For shape of emissive object, "Mesh Extra Objects" addon can be used: https://docs.blender.org/manual/en/latest/addons/add_mesh/mesh_extra_objects.html
 5. Add camera to the scene. Position camera so that objects are visible. Simulate depth of field (effect of lens cameras).  
-  * Help: https://docs.blender.org/manual/en/latest/render/cameras.html#depth-of-field
-  * Help: https://www.youtube.com/watch?v=ahT3P274EMw&ab_channel=RyanKingArt
+    * Help: https://docs.blender.org/manual/en/latest/render/cameras.html#depth-of-field
+    * Help: https://www.youtube.com/watch?v=ahT3P274EMw&ab_channel=RyanKingArt
 7. Render scene using EEVEE. Return to previous steps and fix elements if needed.
 8. Render scene using Cycles.
 9. Store scene (Blender file project), rendered images and document steps.
@@ -98,11 +98,11 @@ Images rendered from 3D scene are rarely directly used as final image. Post-proc
 
 Steps:
 1. Get familiar with basics of compositing: 
-* https://www.youtube.com/watch?v=xEpVyEi1Hts&ab_channel=RyanKingArt
+    * https://www.youtube.com/watch?v=xEpVyEi1Hts&ab_channel=RyanKingArt
 2. Perform different compositing operations on rendered image, e.g.:
-* https://docs.blender.org/manual/en/latest/compositing/types/color/posterize.html
-* https://docs.blender.org/manual/en/latest/compositing/types/filter/glare.html
-* https://docs.blender.org/manual/en/latest/compositing/types/filter/pixelate.html
+    * https://docs.blender.org/manual/en/latest/compositing/types/color/posterize.html
+    * https://docs.blender.org/manual/en/latest/compositing/types/filter/glare.html
+    * https://docs.blender.org/manual/en/latest/compositing/types/filter/pixelate.html
 3. Store composited renders and document composting steps.
 
 ### 2. Editing objects: materials
@@ -122,18 +122,18 @@ Material consists of two main parts:
 Steps:
 1. Create new Blender project.
 2. Download model from some of online 3D models libraries:
-* https://polyhaven.com/models
-* https://casual-effects.com/data/index.html
-* http://graphics.stanford.edu/data/3Dscanrep/
-* https://developer.nvidia.com/orca
-* https://www.realtimerendering.com/portal.html
+    * https://polyhaven.com/models
+    * https://casual-effects.com/data/index.html
+    * http://graphics.stanford.edu/data/3Dscanrep/
+    * https://developer.nvidia.com/orca
+    * https://www.realtimerendering.com/portal.html
 3. Illuminate scene with environment light: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/environment.html. HDRIs: https://polyhaven.com/hdris
 4. Place camera in 3D scene and position for rendering
 5. Render (EEVEE or Cycles) object (this render will be needed for documentation when comparing object with original and new material)
 6. Create new material for object:
-* Create new scattering function of your choice: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
-* Download image textures of your choice, e.g., https://polyhaven.com/textures and use it for this material
-* Unwrap object: https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html and use generated UV coordinates as texture coordinates
+    * Create new scattering function of your choice: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
+    * Download image textures of your choice, e.g., https://polyhaven.com/textures and use it for this material
+    * Unwrap object: https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html and use generated UV coordinates as texture coordinates
 7. Render object with new material.
 8. Store Blender project and document steps.
 
@@ -141,18 +141,18 @@ Sometimes image textures are hard to place on complex shapes. In this case, proc
 
 Steps:
 1. Download and import additional model in existing scene from some of online 3D models libraries:
-* https://polyhaven.com/models
-* https://casual-effects.com/data/index.html
-* http://graphics.stanford.edu/data/3Dscanrep/
-* https://developer.nvidia.com/orca
-* https://www.realtimerendering.com/portal.html
+    * https://polyhaven.com/models
+    * https://casual-effects.com/data/index.html
+    * http://graphics.stanford.edu/data/3Dscanrep/
+    * https://developer.nvidia.com/orca
+    * https://www.realtimerendering.com/portal.html
 2. Render (EEVEE or Cycles) object with original material (this render will be needed for documentation when comparing object with original and new material)
-2. Create new material for the new object:
-* Create scattering function of your choice: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
-* Use procedural texture of your choice for as material texture: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/voronoi.html
-  * Help: https://www.youtube.com/watch?app=desktop&v=2_JRwbUORTI&ab_channel=RyanKingArt
-3. Render object with new material.
-4. Store Blender project and document steps.
+3. Create new material for the new object:
+    * Create scattering function of your choice: https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/index.html
+    * Use procedural texture of your choice for as material texture: https://docs.blender.org/manual/en/latest/render/shader_nodes/textures/voronoi.html
+      * Help: https://www.youtube.com/watch?app=desktop&v=2_JRwbUORTI&ab_channel=RyanKingArt
+4. Render object with new material.
+5. Store Blender project and document steps.
 
 ### 3. Modeling objects
 
@@ -161,11 +161,11 @@ Sometimes, existing models that can be found on online 3D model repositories are
 Steps:
 1. Create new Blender project
 2. Get familiar with fundamental mesh modeling techniques: rotate, scale, translate, extrude, etc.
-* https://www.youtube.com/watch?v=tV1ajY2059g&ab_channel=Dansky
-* https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD
+    * https://www.youtube.com/watch?v=tV1ajY2059g&ab_channel=Dansky
+    * https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD
 3. Look around you (or get inspired by searching on the web) and model at least 3 objects using basic shapes. Help:
-* https://cgcookie.com/posts/9-simple-blender-projects-for-beginners
-* https://www.vandelaydesign.com/blender-tutorials/
+    * https://cgcookie.com/posts/9-simple-blender-projects-for-beginners
+    * https://www.vandelaydesign.com/blender-tutorials/
 4. Create material for created shapes: scattering function and texture of your choice.
 5. Place objects to form the scene.
 6. Add camera viewing the objects. 
@@ -184,13 +184,13 @@ All objects that are being animated have to have keyframes with different transf
 Steps:
 1. Create new Blender project.
 2. Get familiar with basics of animation:
-* https://www.youtube.com/watch?v=CBJp82tlR3M&ab_channel=RyanKingArt
+    * https://www.youtube.com/watch?v=CBJp82tlR3M&ab_channel=RyanKingArt
 3. Download and import additional model in existing scene from some of online 3D models libraries:
-  * https://polyhaven.com/models
-  * https://casual-effects.com/data/index.html
-  * http://graphics.stanford.edu/data/3Dscanrep/
-  * https://developer.nvidia.com/orca
-  * https://www.realtimerendering.com/portal.html
+    * https://polyhaven.com/models
+    * https://casual-effects.com/data/index.html
+    * http://graphics.stanford.edu/data/3Dscanrep/
+    * https://developer.nvidia.com/orca
+    * https://www.realtimerendering.com/portal.html
 4. Create simple animation of object where scale, position and rotation are changed over time. For example, object is moving between several positions, rotating and varying scale.
 5. Add camera and light in the scene (e.g., environment light with HDRI image texture)
 6. Render animation.
@@ -201,10 +201,10 @@ Movement of objects in 3D scene is often described with parametric curves:
 
 Steps:
 1. Get familiar with Bezier curves:
-* https://www.youtube.com/watch?v=Ve9h7-E8EuM&ab_channel=RyanKingArt
+    * https://www.youtube.com/watch?v=Ve9h7-E8EuM&ab_channel=RyanKingArt
 2. Create simple Bezier curve which will be used as animation path.
 3. Use existing or add/create new object. Animate its movement over created curve using `follow path constrain`: https://docs.blender.org/manual/en/latest/animation/constraints/relationship/follow_path.html
-* Help: https://www.youtube.com/watch?v=_phnVrVwUe4&ab_channel=ProfessorCraven
+    * Help: https://www.youtube.com/watch?v=_phnVrVwUe4&ab_channel=ProfessorCraven
 4. Render animation.
 5. Store Blender project, animation and document steps.
 
@@ -215,9 +215,9 @@ Certain animations are hard to be done by hand, e.g., fluids (e.g., water), gase
 Steps:
 1. Create new Blender project.
 2. Investigate fluid simulation in blender.
-* https://docs.blender.org/manual/en/latest/physics/fluid/index.html
-  * Help liquid: https://www.youtube.com/watch?v=6B0QM4Cft5c&ab_channel=CGCookie
-  * Help gas: https://www.youtube.com/watch?v=zyIJQHlFQs0&ab_channel=Polyfjord
+    * https://docs.blender.org/manual/en/latest/physics/fluid/index.html
+      * Help liquid: https://www.youtube.com/watch?v=6B0QM4Cft5c&ab_channel=CGCookie
+      * Help gas: https://www.youtube.com/watch?v=zyIJQHlFQs0&ab_channel=Polyfjord
 3. Create liquid or gas simulation
 4. Add camera and illumination
 5. Render animation.
@@ -238,7 +238,7 @@ Examples where instancing can be used:
 Steps:
 1. Create new Blender project.
 2. Get familiar with instancing via particle systems:
-* https://www.youtube.com/watch?v=ic2ppLXS2xQ&ab_channel=StevenScott
+    * https://www.youtube.com/watch?v=ic2ppLXS2xQ&ab_channel=StevenScott
 3. Create/download base model which will be used as object on which smaller geometry will be instanced
 4. Create/download smaller geometry which is to be instanced
 5. Perform instancing using particle systems
@@ -253,10 +253,10 @@ Steps:
 2. Import object with premade animation: https://www.mixamo.com/
 3. Add lights and camera.
 4. Render animation. Suggestion: save animation as array of images and merge them together in animation video using video editing:
-* https://docs.blender.org/manual/en/latest/video_editing/index.html  
+    * https://docs.blender.org/manual/en/latest/video_editing/index.html  
 5. Use compositing to apply at least 2 effects on rendered frames:
-* https://docs.blender.org/manual/en/latest/compositing/index.html
-* Help: https://artisticrender.com/how-to-use-the-compositor-for-animations-in-blender/
+    * https://docs.blender.org/manual/en/latest/compositing/index.html
+    * Help: https://artisticrender.com/how-to-use-the-compositor-for-animations-in-blender/
 6. Store Blender project, animation and document steps.
 
 ### 8. (Optional) Using 3rd party rendering engines 
@@ -268,8 +268,8 @@ Steps:
 2. Download premade scene (e.g., https://casual-effects.com/data/index.html) and import in Blender.
 3. Setup lights and cameras.
 4. Investigate which other rendering engines are available for Blender:
-* https://inspirationtuts.com/blender-render-engines-free-options-included/
-* https://www.blendernation.com/2020/08/03/overview-of-free-blender-renderers/
+    * https://inspirationtuts.com/blender-render-engines-free-options-included/
+    * https://www.blendernation.com/2020/08/03/overview-of-free-blender-renderers/
 5. Import at least two (e.g., LuxCore and Mitsuba) 3rd party rendering engines.
 6. Render images of 3D scene for each rendering engine.
 7. Store Blender project, rendered images and document steps
