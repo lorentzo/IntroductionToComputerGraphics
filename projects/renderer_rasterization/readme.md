@@ -295,8 +295,12 @@ Example: https://threejs.org/examples/#webgl_interactive_raycasting_points
 
 Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_interactive_raycasting_points.html
 
+https://threejs.org/docs/#api/en/core/Raycaster
+
 ### 10. Shaders (Optional)
 
 Example: https://threejs.org/examples/#webgl_shader2
 
 Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_shader2.html
+
+https://threejs.org/docs/#api/en/materials/ShaderMaterial
