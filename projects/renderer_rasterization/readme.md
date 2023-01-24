@@ -70,14 +70,16 @@ For successful project submission it is required to:
 3. Interaction
 4. More interesting objects
 5. Adding environment
-6. Post processing
-7. Animated objects (Optional)
-8. Instancing (Optional)
-9. Raycasting (Optional)
+6. Shaders
+7. Post processing
+8. Shaders 2 (Optional)
+9. Animated objects (Optional)
+10. Instancing (Optional)
+11. Interaction via raycasting (Optional)
 
 Grading:
-* Tasks 1-6 are foundational and result in 75 points.
-* Optional tasks 7-8 are optional and each bring 25 points. Any optional task can be chosen but tasks 1-6 should be solved before to understand foundations. These tasks are for those who want to do more and/or have more project points.
+* Tasks 1-7 are foundational and result in 75 points.
+* Optional tasks 8-11 are optional and each bring 25 points. Any optional task can be chosen but tasks 1-6 should be solved before to understand foundations. These tasks are for those who want to do more and/or have more project points.
 * Maximum number of points is 100
 
 ## Project tasks
@@ -230,7 +232,46 @@ Note: Alternative ways to add environment texture:
   * `RGBEloader`. Example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_gltf.html
    * HDRI image can be downloaded from PolyHaven: https://polyhaven.com/hdris
 
-### 6. Post processing
+### 6. Shaders
+
+Besides built in materials, three.js supports creating custom material using shaders - `ShaderMaterial`:
+* https://threejs.org/docs/#api/en/materials/ShaderMaterial
+
+To understand `ShaderMaterial`, we will shortly discuss rasterization-based rendering engines which consist of pipeline with at least following modules:
+* Application phase - place where objects, lights and cameras are defined, for example this is `javascript` file you are using with three.js as library
+* Vertex shader - operations on objects vertices, e.g., transformations on vertices can be executed here
+* Rasterization phase - finding which triangles are covering image plane pixels -> sampling which results in fragments
+* Fragment shader - operations on triangle samples (fragments) which cover image plane, e.g., shading can be defined here
+* Test and blend - finishing operations pixels color using calculated fragments
+
+More about rasterization-based rendering pipeline: https://learnopengl.com/Getting-started/Hello-Triangle
+
+`ShaderMaterial` requires at least:
+* `uniforms` - a (javascript) dictionary which contains variables which will be used further by `vertex` and `fragment` shader.
+* `vertex shader` - a small program which accepts geometry and performs manipulation of each individual vertices and passes data to `fragment shader`
+* `fragment shader` - a small program which is used for calculating color (shading) of fragments - parts of triangles inside image pixels
+
+In this exercise, we will create three.js `Mesh` where `Geometry` is defined on application phase (e.g., `IcosahedronGeometry`) and two additional scripts which define `vertex` and `fragment` shader needed for creating `ShaderMaterial`. Vertex shader will correctly pass vertices information from application phase to rasterization phase. Finally, we will use `fragment` shader to define appearance of object, that is, its color.
+
+Steps:
+1. Import or use built-in three.js `Geometry`, e.g., `IcosahedronGeometry`
+2. Create `vertex shader` script which correctly passes geometry vertices from application phase to rasterization and then fragment shader.
+    * Vertex shader must apply model matrix, view matrix and projection matrix on input vertices and output the result (`gl_Position`)
+3. Create `fragment shader` script which defines color of object using simple texture defined in `fragment shader` (`gl_FragColor`). 
+    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/09/
+    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/10/
+    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/11/
+    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/12/
+    * More advanced textures can be found on `ShaderToy`: e.g., https://www.shadertoy.com/view/Xd23Dh
+4. Create `ShaderMaterial` using created `vertex` and `fragment` shaders (and `uniforms` if needed)
+5. Create `Mesh` using created `Geometry` and `ShaderMaterial`. Add to the `Scene`.
+6. Render image, store code and document steps.
+
+Help:
+* Example: https://threejs.org/examples/#webgl_shader2
+* Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_shader2.html
+
+### 7. Post processing
 
 Rendered image can be additionally enhanced using post-processing operations. Three.js defines `EffectComposer` which provides different post-processing operations:
 * https://threejs.org/docs/index.html#examples/en/postprocessing/EffectComposer
@@ -244,7 +285,13 @@ Help:
 * Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_postprocessing_outline.html
 * Example: https://threejs.org/examples/#webgl_postprocessing_outline
 
-### 7. Animated objects (Optional)
+### 8. Shaders 2 (Optional)
+
+TODO:
+* https://github.com/mrdoob/three.js/blob/master/examples/webgl_buffergeometry_custom_attributes_particles.html
+* https://threejs.org/examples/#webgl_buffergeometry_custom_attributes_particles
+
+### 9. Animated objects (Optional)
 
 Tasks:
 1. Get familiar with three.js object animation: 
@@ -262,7 +309,7 @@ Help:
 * https://discoverthreejs.com/book/first-steps/animation-system/
 * Example: https://threejs.org/examples/#webgl_animation_skinning_blending and https://github.com/mrdoob/three.js/blob/master/examples/webgl_animation_skinning_blending.html
 
-### 8. Instancing (Optional)
+### 10. Instancing (Optional)
 
 Having lots of geometry in scene is expensive. To solve this problem, instancing can be used. The idea is to use the same mesh data with different transformation matrices. Example:
 * https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
@@ -287,7 +334,7 @@ Help:
 * Example: https://threejs.org/examples/#webgl_instancing_scatter
 * Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_instancing_scatter.html
 
-### 9. Raycasting (Optional)
+### 11. Interaction via raycasting (Optional)
 
 TODO
 
@@ -296,11 +343,3 @@ Example: https://threejs.org/examples/#webgl_interactive_raycasting_points
 Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_interactive_raycasting_points.html
 
 https://threejs.org/docs/#api/en/core/Raycaster
-
-### 10. Shaders (Optional)
-
-Example: https://threejs.org/examples/#webgl_shader2
-
-Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_shader2.html
-
-https://threejs.org/docs/#api/en/materials/ShaderMaterial
