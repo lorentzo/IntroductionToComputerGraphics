@@ -38,23 +38,14 @@ Knowledge of one programming language (writing and executing), e.g.:
 10. (Optional) fundamentals of area lights
 11. (Optional) fundamentals of camera movement
 
-## Deliverables
-
-For successful project submission it is required to:
-1. Write ray-tracing based renderer code (see next section `Tasks and grading` for details)
-2. Write documentation: what has been done, how, add code snippets and explanations. Provide renderered images, work process, developed methods, results and future work.
-3. Upload your code, documentation and resulting images on any Git host: GitHub, GitLab, BitBucket, etc. Write readme file for explaining how to run the code.
-4. Send link to Git host at latest on **8.4.2023.**
-
 ## Tasks and grading
 
-Contents:
-1. Rendering loop (5 points)
-2. Camera (15 points)
-3. Objects: shape (15 points)
-4. Enhancing camera and rendering loop (10 points)
-5. Object material: diffuse (15 points)
-6. Object material: specular (20 points)
+1. (Fundamental) Rendering loop (5 points)
+2. (Fundamental) Camera (15 points)
+3. (Fundamental) Objects: shape (15 points)
+4. (Fundamental) Enhancing camera and rendering loop (10 points)
+5. (Fundamental) Object material: diffuse (15 points)
+6. (Fundamental) Object material: specular (20 points)
 7. (Optional) Object material: specular transmission (30 points)
 8. (Optional) Lights (30 points)
 9. (Optional) Positioning and orienting camera (30 points)
@@ -65,11 +56,19 @@ Grading:
 * Tasks 7-10 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-6 must be solved before since optional tasks build on a top of them.
 * Maximum number of project points is 100
 
+## Deliverables
+
+For successful project submission it is required to:
+1. Write ray-tracing based renderer code (see next section `Tasks and grading` for details)
+2. Write documentation: what has been done, how, add code snippets and explanations. Provide renderered images, work process, developed methods, results and future work.
+3. Upload your code, documentation and resulting images on any Git host: GitHub, GitLab, BitBucket, etc. Write readme file for explaining how to run the code.
+4. Send link to Git host at latest on **8.4.2023.**
+
 ## Project tasks
 
 NOTE: naming classes, functions and generally code organization is all up to you. Most important thing is to achieve required functionality. Therefore, all points will be awarded if functionality of tasks is satisfied.
 
-### 1. Rendering loop
+### 1. (Fundamental) Rendering loop
 
 The task of rendering engine is to create an image out of a 3D scene. Therefore, the basis for the rest of the project is to visualize results in form of an image. Thus, the first step of the project is to define output image. Colors of pixels will be calculated in next steps of the project for now, constant color can be used.
 
@@ -94,7 +93,7 @@ for (int j = image_height-1; j >= 0; --j)
 Help: 
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 2: output image
 
-### 2. Camera
+### 2. (Fundamental) Camera
 
 To calculate the colors of pixels on image plane in virtual camera, we first need to calculate which objects are visible from camera - we need to solve visibility problem.
 Ray-tracing is one solution to visbility problem.
@@ -147,7 +146,7 @@ Help:
 Notes:
 * For vectors and rays, linear algebra libraries such as https://github.com/g-truc/glm can be used.
 
-### 3. Objects: shape
+### 3. (Fundamental) Objects: shape
 
 Objects in 3D scene can be decoupled in shape and material. Shape property of an object is needed for ray-object intersection testing: solving visibility problem.
 
@@ -175,7 +174,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 6: Surface Normals and Multiple Objects
 
 
-### 4. Enhancing camera rays and rendering
+### 4. (Fundamental) Enhancing camera rays and rendering
 
 Rendered image in previous step contains object with jagged edges: aliasing. This happens because only one ray is generated per pixel. Each pixel, when projected in 3D scene, covers certain area which may contain multiple objects and thus colors. 
 
@@ -190,7 +189,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 7: Antialiasing
 
 
-### 5. Object material: diffuse
+### 5. (Fundamental) Object material: diffuse
 
 Once intersection between camera ray and object is found we can calculate color of the object - shading. Previous step gave uniformly-colored and flat looking object because material wasn't fully defined and shape normal wasn't used.
 
@@ -222,7 +221,7 @@ Help:
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 8: Diffuse Materials
 * https://raytracing.github.io/books/RayTracingInOneWeekend.html, chapter 9: Metal. This chapter can help to structure the code in modules.
 
-### 6. Object material: specular
+### 6. (Fundamental) Object material: specular
 
 Another simple material is specular. Characteristics:
 1. Light ray falling on specular surface is reflected in mirror direction (angle of reflected light ray is the same as incoming light ray).

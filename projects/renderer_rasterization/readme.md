@@ -2,8 +2,6 @@
 
 # Three.js: 3D scene, rendering, animation and interaction
 
-## NOTE: Project description is under work, it will get updated!
-
 ## Introduction
 
 Three.js (https://threejs.org/) is lightweight, cross-browser, general purpose 3D library using WebGL for rendering.
@@ -53,7 +51,29 @@ More information on three.js
 1. Getting familiar with 3D interactive library
 2. Understanding 3D scene elements: objects, lights, cameras and environment in practice
 3. Foundations of interaction and animation
-4. Post-processing
+4. Importing workflows for interactive applications
+5. Rasterization-based pipeline; vertex and fragment shder
+6. Post-processing effects
+7. Optional: interaction via raycasting
+8. Optional: working with large amounts of geometry
+
+## Tasks and grading
+
+1. (Fundamental) Getting familiar with three.js (10)
+2. (Fundamental) Adding rendering loop (5)
+3. (Fundamental) Interaction (5)
+4. (Fundamental) More interesting objects (15)
+5. (Fundamental) Adding environment (10)
+6. (Fundamental) Shaders (20)
+7. (Fundamental) Post processing (15)
+8. (Optional) Animated objects (25)
+9. (Optional) Instancing (25)
+10. (Optional) Interaction via raycasting (25)
+
+Grading:
+* Tasks 1-7 are foundational and result in 80 points.
+* Optional tasks 8-10 are optional and each bring 25 points. Any optional task can be chosen but tasks 1-6 should be solved before to understand foundations. Optional tasks are for those who want to do more and/or have more project points.
+* Maximum number of points is 100.
 
 ## Deliverables
 
@@ -63,32 +83,13 @@ For successful project submission it is required to:
 3. Upload your code, data used in code (e.g., objects), documentation and results on any Git host: GitHub, GitLab, BitBucket, etc. Write readme for how to run the code.
 4. Share the link of Git host at latest on **8.4.2023.**
 
-## Tasks and grading
-
-1. Getting familiar with three.js
-2. Adding rendering loop
-3. Interaction
-4. More interesting objects
-5. Adding environment
-6. Shaders
-7. Post processing
-8. Shaders 2 (Optional)
-9. Animated objects (Optional)
-10. Instancing (Optional)
-11. Interaction via raycasting (Optional)
-
-Grading:
-* Tasks 1-7 are foundational and result in 75 points.
-* Optional tasks 8-11 are optional and each bring 25 points. Any optional task can be chosen but tasks 1-6 should be solved before to understand foundations. These tasks are for those who want to do more and/or have more project points.
-* Maximum number of points is 100
-
 ## Project tasks
 
 NOTE: project tasks leave space for you to experiment and explore. Therefore, code organization and scene elements are all up to you. Main point is to cover the required concepts. 
 
 NOTE: project tasks can be all solved using one `javascript` file and one three.js scene or using multiple `javascript` files and three.js scenes. This is up to you.
 
-### 1. Getting familiar with three.js
+### 1. (Fundamental) Getting familiar with three.js
 
 Three.js defines `Scene` which contains all that we can see. It defines `world space` coordinate system. Adding objects to `scene` creates a `scene graph`.
 * `Scene` object: https://threejs.org/docs/#api/en/scenes/Scene
@@ -137,7 +138,7 @@ Help:
 * https://discoverthreejs.com/book/first-steps/physically-based-rendering/
 * https://aerotwist.com/tutorials/getting-started-with-three-js/
 
-### 2. Adding rendering loop
+### 2. (Fundamental) Adding rendering loop
 
 Interactive applications (e.g., games) contain rendering loop (e.g., game loop) which is running rendering command in a loop creating certain amount if images - frames per second.
 
@@ -171,7 +172,7 @@ Help:
 More information:
 * https://discoverthreejs.com/book/first-steps/animation-loop/
 
-### 3. Interaction
+### 3. (Fundamental) Interaction
 
 Three.js enables moving camera in the scene using `Controls` object. `Control` operates on camera which is used for rendering:
 * https://threejs.org/docs/#examples/en/controls/FlyControls
@@ -182,7 +183,7 @@ Tasks:
 1. Add `Control` of your choice to camera.
 2. Store code, render the scene (few images from different camera positions is enough), store images, document steps. 
 
-### 4. More interesting objects
+### 4. (Fundamental) More interesting objects
 
 Three.js supports basic geometry such as box, sphere, cone, etc. To make 3D scene more interesting, more complex geometry is often created using 3D modeling tools (e.g., Blender, Maya, 3DS Max, Houdini). 
 
@@ -212,7 +213,7 @@ Help:
 * https://discoverthreejs.com/book/first-steps/load-models/
 
 
-### 5. Adding environment
+### 5. (Fundamental) Adding environment
 
 So far, even with present lights, scene has uniform background (environment) color. 
 
@@ -232,37 +233,38 @@ Note: Alternative ways to add environment texture:
   * `RGBEloader`. Example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_gltf.html
    * HDRI image can be downloaded from PolyHaven: https://polyhaven.com/hdris
 
-### 6. Shaders
+### 6. (Fundamental) Shaders
 
 Besides built in materials, three.js supports creating custom material using shaders - `ShaderMaterial`:
 * https://threejs.org/docs/#api/en/materials/ShaderMaterial
 
-To understand `ShaderMaterial`, we will shortly discuss rasterization-based rendering engines which consist of pipeline with at least following modules:
-* Application phase - place where objects, lights and cameras are defined, for example this is `javascript` file you are using with three.js as library
-* Vertex shader - operations on objects vertices, e.g., transformations on vertices can be executed here
-* Rasterization phase - finding which triangles are covering image plane pixels -> sampling which results in fragments
-* Fragment shader - operations on triangle samples (fragments) which cover image plane, e.g., shading can be defined here
-* Test and blend - finishing operations pixels color using calculated fragments
+To understand `ShaderMaterial`, we will shortly discuss rasterization-based rendering engines. Rasterization-based rendering consists of a pipeline with at least following modules:
+* Application phase - place where objects, lights and cameras are defined, for example this is `javascript` file you are using with three.js as library before calling `render()` function. Application phase sends geometry (vertices), transforms, uniforms and other data used for defining 3D scene to vertex shader.
+* Vertex shader - performs operations on objects vertices, e.g., transformations on vertices are executed here
+* Rasterization phase - finds which triangles are covering image plane pixels. This is done by sampling, which results in fragments - parts of triangle covering pixels of image plane.
+* Fragment shader - performs operations on fragments. In this pase, color of triangles covering the image plane pixels is calculated. That is, color of those pixels is calculated. This operation is called shading.
+* Blending and merging phase - combines calculated fragment color using information on depth, stencil and alpha.
 
 More about rasterization-based rendering pipeline: https://learnopengl.com/Getting-started/Hello-Triangle
 
-`ShaderMaterial` requires at least:
+To create `ShaderMaterial` it is required at least to define:
 * `uniforms` - a (javascript) dictionary which contains variables which will be used further by `vertex` and `fragment` shader.
 * `vertex shader` - a small program which accepts geometry and performs manipulation of each individual vertices and passes data to `fragment shader`
 * `fragment shader` - a small program which is used for calculating color (shading) of fragments - parts of triangles inside image pixels
+* Help: https://threejs.org/docs/#api/en/materials/ShaderMaterial
 
-In this exercise, we will create three.js `Mesh` where `Geometry` is defined on application phase (e.g., `IcosahedronGeometry`) and two additional scripts which define `vertex` and `fragment` shader needed for creating `ShaderMaterial`. Vertex shader will correctly pass vertices information from application phase to rasterization phase. Finally, we will use `fragment` shader to define appearance of object, that is, its color.
+In this taks, we will create three.js `Mesh` with `Geometry` (e.g., `IcosahedronGeometry`) and two additional scripts which define `vertex` and `fragment` shader needed for creating `ShaderMaterial` (this is called application phase). The task of `Vertex` shader will be to correctly pass vertices information from application phase to rasterization phase. Finally, we will use `fragment` shader to define appearance of the object, that is, its color.
 
 Steps:
 1. Import or use built-in three.js `Geometry`, e.g., `IcosahedronGeometry`
 2. Create `vertex shader` script which correctly passes geometry vertices from application phase to rasterization and then fragment shader.
     * Vertex shader must apply model matrix, view matrix and projection matrix on input vertices and output the result (`gl_Position`)
-3. Create `fragment shader` script which defines color of object using simple texture defined in `fragment shader` (`gl_FragColor`). 
-    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/09/
-    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/10/
-    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/11/
-    * Help: textures defined in fragment shader can be found here: https://thebookofshaders.com/12/
-    * More advanced textures can be found on `ShaderToy`: e.g., https://www.shadertoy.com/view/Xd23Dh
+3. Create `fragment shader` script which defines color of object (`gl_FragColor`) using simple procedural texture.
+    * Help: procedural textures defined in fragment shader can be found here: https://thebookofshaders.com/09/
+    * Help: procedural textures defined in fragment shader can be found here: https://thebookofshaders.com/10/
+    * Help: procedural textures defined in fragment shader can be found here: https://thebookofshaders.com/11/
+    * Help: procedural textures defined in fragment shader can be found here: https://thebookofshaders.com/12/
+    * More advanced procedural textures, defined in fragment shader, can be found on `ShaderToy`: e.g., https://www.shadertoy.com/view/Xd23Dh
 4. Create `ShaderMaterial` using created `vertex` and `fragment` shaders (and `uniforms` if needed)
 5. Create `Mesh` using created `Geometry` and `ShaderMaterial`. Add to the `Scene`.
 6. Render image, store code and document steps.
@@ -271,7 +273,7 @@ Help:
 * Example: https://threejs.org/examples/#webgl_shader2
 * Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_shader2.html
 
-### 7. Post processing
+### 7. (Fundamental) Post processing
 
 Rendered image can be additionally enhanced using post-processing operations. Three.js defines `EffectComposer` which provides different post-processing operations:
 * https://threejs.org/docs/index.html#examples/en/postprocessing/EffectComposer
@@ -285,13 +287,7 @@ Help:
 * Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_postprocessing_outline.html
 * Example: https://threejs.org/examples/#webgl_postprocessing_outline
 
-### 8. Shaders 2 (Optional)
-
-TODO:
-* https://github.com/mrdoob/three.js/blob/master/examples/webgl_buffergeometry_custom_attributes_particles.html
-* https://threejs.org/examples/#webgl_buffergeometry_custom_attributes_particles
-
-### 9. Animated objects (Optional)
+### 9. (Optional) Animated objects
 
 Tasks:
 1. Get familiar with three.js object animation: 
@@ -307,12 +303,13 @@ NOTE: for this task, new `javascript` file with separate three.js scene might be
 
 Help: 
 * https://discoverthreejs.com/book/first-steps/animation-system/
-* Example: https://threejs.org/examples/#webgl_animation_skinning_blending and https://github.com/mrdoob/three.js/blob/master/examples/webgl_animation_skinning_blending.html
+* Example: https://threejs.org/examples#webgl_animation_skinning_blending
+* Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_animation_skinning_blending.html
 
-### 10. Instancing (Optional)
+### 10. (Optional) Instancing
 
-Having lots of geometry in scene is expensive. To solve this problem, instancing can be used. The idea is to use the same mesh data with different transformation matrices. Example:
-* https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
+Having lots of same geometry with different position, scale and rotation in scene is expensive. To solve this problem, instancing can be used. The idea is to use the same mesh data with different transformation matrices (scale, rotate, translate). For this purposes, three.js provides `InstancedMesh`:
+* https://threejs.org/docs/#api/en/objects/InstancedMesh
 
 Examples where instancing can be used:
 * Grass on terrain
@@ -326,20 +323,35 @@ NOTE: for this task, new `javascript` file with separate three.js scene might be
 Tasks:
 1. Download/create base object which will be used to place instances (e.g., small terrain)
 2. Download/create at least two object which will be used for instancing (e.g., blades of grass and rocks)
-3. Use `MeshSurfaceSampler` to instance objects.
-    * More on instancing: https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
+3. Use `MeshSurfaceSampler` to find positions on base object where smaller objects will be instanced
+    * `MeshSurfaceSampler`: https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler
+4. Use positions calculated by `MeshSurfaceSampler` to instance smaller objects using `InstancedMesh`:
+    * https://threejs.org/docs/#api/en/objects/InstancedMesh
 4. Store code, resulting images, document steps.
 
 Help:
-* Example: https://threejs.org/examples/#webgl_instancing_scatter
-* Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_instancing_scatter.html
+* `MeshSurfaceSampler` example: https://threejs.org/examples/#webgl_instancing_scatter
+* `MeshSurfaceSampler` code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_instancing_scatter.html
+* `InstancedMesh` example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_instancing_raycast.html
+* `InstancedMesh` code example: https://threejs.org/examples/#webgl_instancing_raycast
 
-### 11. Interaction via raycasting (Optional)
+### 11. (Optional) Interaction via raycasting
 
-TODO
+Often, interaction with 3D scene consists of "picking" objects with mouse pointer. That is, we would like to select objects in 3D scene using our mouse pointer. To solve this, three.js providers `RayCaster` object:
+* https://threejs.org/docs/index.html#api/en/core/Raycaster
 
-Example: https://threejs.org/examples/#webgl_interactive_raycasting_points
+`Raycaster` takes information on camera and pointer position which is then used to construct ray. Constructed ray is then sent in to 3D scene and tested for intersection with objects. This process is generally called raycasting. Once intersection point has been found, we can obtain information on object which has been intersected, that is object that we can select with our mouse pointer.
 
-Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_interactive_raycasting_points.html
+Steps:
+1. Create `Raycaster` object. Help: https://threejs.org/docs/index.html#api/en/core/Raycaster
+1. Create variable (vector2) which keeps track of pointer position and which will be used for creating rays
+2. Create function `onPointerMove(event)` which updates pointer position.
+3. `Raycaster` must be updated with current camera and pointer position. Add this to rendering loop using `setFromCamera()` function
+4. Use raycaster to find intersection with object using `intersectObjects()` function. Also, this is done in rendering loop.
+5. If object is being intersected, set its material to emissive.
+6. Render images where intersecting objects with mouse pointer is visible.
+7. Save code, document steps with rendered images.
 
-https://threejs.org/docs/#api/en/core/Raycaster
+Help:
+* Example: https://threejs.org/examples/#webgl_interactive_raycasting_points
+* Code example: https://github.com/mrdoob/three.js/blob/master/examples/webgl_interactive_raycasting_points.html

@@ -29,10 +29,10 @@ Blender offers many options and thus might be overwhelming. Therefore, starting 
 
 ## Tasks and grading
 
-1. Objects, lights, camera and render! (15 points)
-2. Editing objects: materials (20 points)
-3. Modeling objects (20 points)
-4. Animation basics (20 points)
+1. (Fundamental) Objects, lights, camera and render! (15 points)
+2. (Fundamental) Editing objects: materials (20 points)
+3. (Fundamental) Modeling objects (20 points)
+4. (Fundamental) Animation basics (20 points)
 5. (Optional) Physical simulation (30 points)
 6. (Optional) Instancing (30 points)
 7. (Optional) Character animation (30 points)
@@ -42,7 +42,7 @@ Blender offers many options and thus might be overwhelming. Therefore, starting 
 
 Grading:
 * Tasks: 1-4 are foundations and in total result in 75 points.
-* Tasks: 4-9 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-4 should be solved before to understand foundations. These tasks are for those who want to do more and/or have more project points.
+* Tasks: 4-9 are optional and each bring 30 points. Any optional task can be chosen but tasks 1-4 should be solved before to understand foundations. Optional tasks are for those who want to do more and/or have more project points.
 * Maximum number of points is 100
 
 ## Deliverables
@@ -58,7 +58,7 @@ For successful project submission it is required to:
 
 NOTE: project tasks leave space for you to play and investigate. Therefore, it is up to you how you solve the tasks. The main point is that you cover the main requirements.
 
-### 1. Objects, lights, camera and render!
+### 1. (Fundamental) Objects, lights, camera and render!
 
 This first task is here to get you started with Blender interface and basic elements needed to render images.
 
@@ -106,7 +106,7 @@ Steps:
     * https://docs.blender.org/manual/en/latest/compositing/types/filter/pixelate.html
 3. Store composited renders and document composting steps.
 
-### 2. Editing objects: materials
+### 2. (Fundamental) Editing objects: materials
 
 Often, using existing 3D objects is not satisfactory. Their shape or material is then edited.
 
@@ -157,7 +157,7 @@ Steps:
 4. Render object with new material.
 5. Store Blender project and document steps.
 
-### 3. Modeling objects
+### 3. (Fundamental) Modeling objects
 
 Sometimes, existing models that can be found on online 3D model repositories are not enough. Modeling objects using basic shapes is then needed.
 
@@ -176,7 +176,7 @@ Steps:
 8. Render scene (EEVEE or Cycles) and store images.
 9. Store Blender project. Documents steps.
 
-### 4. Animation basics
+### 4. (Fundamental) Animation basics
 
 So far, all objects in scene are static. To introduce animation, we need to introduce time component:
 * https://docs.blender.org/manual/en/latest/editors/timeline.html
