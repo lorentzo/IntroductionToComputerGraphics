@@ -163,9 +163,17 @@ Sometimes, existing models that can be found on online 3D model repositories are
 
 Steps:
 1. Create new Blender project
-2. Get familiar with fundamental mesh modeling techniques: rotate, scale, translate, extrude, etc.
+2. Get familiar with fundamental mesh modeling techniques: rotate, scale, translate, extrude, geometry modifiers, etc.
     * https://www.youtube.com/watch?v=tV1ajY2059g&ab_channel=Dansky
     * https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD
+    * Useful geometry modifiers for modeling:
+      * Array: https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/array.html
+      * Bevel: https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/bevel.html
+      * Boolean: https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/booleans.html
+      * Remesh: https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/remesh.html
+      * Subdivision surface: https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html
+      * Displace: https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/displace.html
+      * Full list: https://docs.blender.org/manual/en/latest/modeling/modifiers/index.html
 3. Look around you (or get inspired by searching on the web) and model at least 3 objects using basic shapes. Help:
     * https://cgcookie.com/posts/9-simple-blender-projects-for-beginners
     * https://www.vandelaydesign.com/blender-tutorials/
