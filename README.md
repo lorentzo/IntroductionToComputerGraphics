@@ -3,10 +3,9 @@
 
 ### 1. Introduction
 
-* What is Computer Graphics.
-* What can be done with computer graphics. Applications.
-* Intuition about image generation.
-* About the course.
+* Computer graphics: what and why
+* Glimpse of image synthesis
+* Course organization
 
 [Introduction lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/1_introduction)
 
@@ -14,10 +13,10 @@
 
 ### 2. Overview of image generation
 
-Ingredients of image generation process:
+Pillars of image generation
 * 3D scene
 * Rendering algorithm
-* Display device: raster image
+* Image and display
 
 [Overview of image generation lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/2_overview_computer_image_generation)
 
@@ -25,8 +24,10 @@ Ingredients of image generation process:
 
 ### 3. 3D scene overview
 
-Foundational ingredients of 3D scene:
+Foundational elements of 3D scene:
 * 3D objects
+  * Shape representation
+  * Material
 * Light sources
 * Cameras
 
@@ -44,11 +45,23 @@ Foundational ingredients of 3D scene:
 
 [Transforms lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/4_transforms)
 
-### 5. 3D objects: mesh
+### 5. 3D objects: mesh shape representation
+
+* Polygon mesh
+* Subdivision surfaces
+* Mesh and rendering
+* Mesh data-structures
+* Mesh modeling and acquisition
 
 [3D objects: mesh lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/5_mesh)
 
-### 6. 3D objects: parametric curves and surfaces
+[3D objects: mesh lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/5_mesh)
+
+### 6. 3D objects: parametric curves and parametric and implicit surfaces
+
+* Parametric curves
+* parametric surfaces
+* Implicit surfaces
 
 [3D objects: parametric curves and surfaces lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/6_parametric_curves_surfaces)
 
