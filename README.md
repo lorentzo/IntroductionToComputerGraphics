@@ -32,6 +32,8 @@ Foundational ingredients of 3D scene:
 
 [3D scene overview lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/3_3d_scene_overview)
 
+[3D scene overview lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/3_3d_scene_overview)
+
 ### 4. Transforms
 
 * 3D space
@@ -39,6 +41,8 @@ Foundational ingredients of 3D scene:
 * Scene organization
 
 [Transforms lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/4_transforms)
+
+[Transforms lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/4_transforms)
 
 ### 5. 3D objects: mesh
 
