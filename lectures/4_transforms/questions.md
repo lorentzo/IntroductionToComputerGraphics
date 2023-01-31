@@ -5,12 +5,12 @@
 * What is transformation? What is its relation to coordinate system frame?
 * What is world coordinate system?
 * What are homogeneous coordinates?
-* Name affine transforms and describe its main characteristic.
+* Name affine transforms and describe main characteristic of affine transform.
 * Name basic transformations.
 * What is translation transform? How it is described (which matrix). How is inverse calculated?
 * What is scale transform? How it is described (which matrix). How is inverse calculated?
 * What is rotation transform? How it is described (which matrix). How is inverse calculated?
-* How does order of transformation matrices applied to point affect the result?
+* Why is order of transformation matrices important?
 * How is transformation of normals performed?
 * How is Euler transform represented? What are the problems with Euler transform?
 * How is rotation around arbitrary axis performed? How many tranformations are needed?
