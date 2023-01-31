@@ -13,9 +13,10 @@
 * How does order of transformation matrices applied to point affect the result?
 * How is transformation of normals performed?
 * How is Euler transform represented? What are the problems with Euler transform?
-* How is rotation around arbitrary axis performed?
+* How is rotation around arbitrary axis performed? How many tranformations are needed?
 * What is the practical use of quaternions? How is quaternion represented? How is rotation with quaternion performed? Why are quaternions used?
 * Describe orthographic projection.
 * Describe perspective projection.
+* What is perspective division and which effect does it have?
 * Describe look-at transform. How it is created?
 * What is scene graph? Which are three main types of nodes in scene graph and what do they represent?
