@@ -1,4 +1,10 @@
 
+## News and updates:
+
+* 1.2.2022. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/1_news_1_2_2023)
+  * Grading, Projects, Exam, Errata, Email
+  * 3D cloth, 3D characters, path and ray tracing
+
 ## Lectures
 
 ### 1. Introduction
