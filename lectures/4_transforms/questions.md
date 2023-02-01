@@ -3,6 +3,7 @@
 * If normal of surface and light direction is known, how is brightness of surface calculated?
 * What is coordinate system frame and how it is defined (two main information)?
 * What is transformation? What is its relation to coordinate system frame?
+* How are objects moved using transformation matrix?
 * What is world coordinate system?
 * What are homogeneous coordinates?
 * Name affine transforms and describe main characteristic of affine transform.
