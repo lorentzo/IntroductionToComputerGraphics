@@ -63,13 +63,15 @@ Foundational elements of 3D scene:
 
 [3D objects: mesh lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/5_mesh)
 
-### 6. 3D objects: parametric curves and parametric and implicit surfaces
+### 6. 3D objects: parametric curves and surfaces, implicit surfaces
 
 * Parametric curves
 * parametric surfaces
 * Implicit surfaces
 
-[3D objects: parametric curves and surfaces lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/6_parametric_curves_surfaces)
+[3D objects: parametric curves and surfaces, implicit surfaces presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/6_parametric_curves_surfaces)
+
+[3D objects: parametric curves and surfaces, implicit surfaces questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/6_parametric_curves_surfaces)
 
 ### 7. 3D Objects: material
 
