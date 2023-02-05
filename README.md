@@ -75,6 +75,11 @@ Foundational elements of 3D scene:
 
 ### 7. 3D Objects: material
 
+* Material observation
+* Physics (optics) models for CG
+* Material models in CG
+  * Scattering models
+
 [3D objects: material lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/7_material)
 
 ### 8. 3D Objects: texture
