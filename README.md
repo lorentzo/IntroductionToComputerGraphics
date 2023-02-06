@@ -82,6 +82,8 @@ Foundational elements of 3D scene:
 
 [3D objects: material lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/7_material)
 
+[3D objects: material lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/7_material)
+
 ### 8. 3D Objects: texture
 
 [3D Objects: texture lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/8_texture)
