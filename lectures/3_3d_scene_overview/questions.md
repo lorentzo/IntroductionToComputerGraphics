@@ -11,6 +11,7 @@
 * Describe fractals and where are they used.
 * Describe point clouds and where are they used. How are they rendered?
 * Describe particle systems and where are they used.
+* what are billboards?
 * Why multiple shape representations exist?
 * How is rendering of different shape representations performed?
 * Which are two main material characteristics needed for shading?
