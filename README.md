@@ -5,6 +5,10 @@
   * Grading, Projects, Exam, Errata, Email
   * 3D cloth, 3D characters, path and ray tracing
 
+  * 8.2.2022. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/2_news_8_2_2023)
+    * New exam date (29.3.2023., 16h, Raum 136.1B), exam questions
+    * Project documentation guidelines
+
 ## Lectures
 
 ### 1. Introduction
