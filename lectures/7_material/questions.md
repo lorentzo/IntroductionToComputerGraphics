@@ -23,7 +23,18 @@
 * Which are two main components of material modeling in computer graphics?
 * What rendering equation describes?
 * What is light attenuation?
-* What is BRDF, BTDF, BSDF? 
-* What are three elements that BRDF depends on?
+* What are BRDF, BTDF and BSDF? 
+* What are three vectors that BRDF depends on?
 * Shortly describe characteristic of empirical, data-based and physically-based scattering models.
-* TODO: continue from lambertian model on.
+* What is the difference between diffuse, glossy and specular surface reflection?
+* How is light reflected from diffuse surface?
+* How is light reflected from perfect specular reflection surface?
+* Shortly describe elements of rendering equation
+* What is the difference in color of specular reflection between metals and dielectrics?
+* How Phong model simulates glossy surface?
+* Name three main elements of Phong reflection model.
+* Explain half vector used in Blinn-Phong model.
+* What is microfacet theory?
+* Which are three main elements of specular component in Cook-Torrance model. Explain them shortly.
+* Shortly explain conservation of energy of BRDF model. Why is it needed?
+* What is the cause of anisotropic surface reflection?

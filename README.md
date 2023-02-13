@@ -90,7 +90,13 @@ Foundational elements of 3D scene:
 
 ### 8. 3D Objects: texture
 
+* Texturing pipeline
+* Image and procedural textures
+* Texture and material modeling
+
 [3D Objects: texture lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/8_texture)
+
+[3D Objects: texture lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/8_texture)
 
 ### 9. Light
 
