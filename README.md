@@ -121,6 +121,13 @@ Foundational elements of 3D scene:
 ### 14. Image
 [Image lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/14_image)
 
+### 15. Animation
+
+* Keyframing (manual)
+* Procedural
+  * Physically-based
+  * Empirical
+
 ### Advanced topics
 
 [More on 3D scene](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/15_more_3d_scene)

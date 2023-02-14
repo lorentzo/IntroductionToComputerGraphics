@@ -1,5 +1,6 @@
 
 * What is the purpose of texture in computer graphics?
+* Shortly describe texturing pipeline and its elements (modules).
 * What is the purpose of projection function in texturing pipeline?
 * What is mesh unwrapping?
 * What is texture atlas?
