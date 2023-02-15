@@ -10,9 +10,9 @@
   * Project documentation guidelines
 
 * 15.2.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/3_news_15_2_2023)
-* New exam date (29.3.2023., 16h, Raum 136.1B)
-* Project deadline: 8.4.2023.
-* Homogeneous coordinates and look-at matrix and camera rays generation
+  * New exam date (29.3.2023., 16h, Raum 136.1B)
+  * Project deadline: 8.4.2023.
+  * Homogeneous coordinates and look-at matrix and camera rays generation
 
 ## Lectures
 
