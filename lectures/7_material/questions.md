@@ -25,12 +25,14 @@
 * What is light attenuation?
 * What are BRDF, BTDF and BSDF? 
 * What are three vectors that BRDF depends on?
+* Given light and view direction, what BRDF returns?
 * Shortly describe characteristic of empirical, data-based and physically-based scattering models.
 * What is the difference between diffuse, glossy and specular surface reflection?
 * How is light reflected from diffuse surface?
 * How is light reflected from perfect specular reflection surface?
 * Shortly describe elements of rendering equation
 * What is the difference in color of specular reflection between metals and dielectrics?
+* What diffuse reflection model determines when it comes to dielectrics?
 * How Phong model simulates glossy surface?
 * Name three main elements of Phong reflection model.
 * Explain half vector used in Blinn-Phong model.
