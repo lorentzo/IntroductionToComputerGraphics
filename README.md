@@ -105,6 +105,13 @@ Foundational elements of 3D scene:
 
 ### 9. Light
 
+* Light and color
+* Real-world light sources
+* Light models
+  * Phyiscal lights
+  * Non-phyiscal lights
+* Shadows
+
 [Light lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/9_light)
 
 ### 10. Camera
