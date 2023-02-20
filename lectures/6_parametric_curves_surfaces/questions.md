@@ -1,4 +1,19 @@
 
+## Exam questions
+---
+* List a few advantages of parametric surfaces over meshes.
+* Explain de Casteljau algorithm for quadratic Bezier curve.
+* What Bernstein polynomials (aka basis functions) define?
+* Which is the most often used degree of Bezier curve for building composite curves (splines)? Why?
+* State the rule of positional and velocity continuity (C0 and C1)
+* Which elements are needed for defining cubic Hermite interpolation curve?
+* Explain Kochanek-Bertels method and parameters (assume there is one tangent per control point). Under which conditions is Catmull-Rom spline obtained?
+* Explain extension of de Casteljau’s algorithm for Bezier patches.
+* How can normal of implicit surfaces be calculated (exact and approximative method).
+* Explain two main approaches to rendering implicit surfaces.
+
+### Exercise questions:
+---
 * List a few advantages of parametric surfaces over meshes.
 * Shortly explain linear interpolation. State the problem of using linear interpolation between multiple points.
 * Explain repeated linear interpolation, that is, de Casteljau algorithm for quadratic Bezier curve.
@@ -8,6 +23,7 @@
 * Which is the most often used degree of Bezier curve for building composite curves (splines)? Why?
 * What is piecewise Bezier curve? How can smooth composite Bezier curve be constructed?
 * State the rule of positional and velocity continuity (C0 and C1)
+* State geometrical continuity rules and how they affect curve/surface
 * Which elements are needed for defining cubic Hermite interpolation curve?
 * Explain Kochanek-Bertels method (assume there is one tangent per control point). 
 * Explain two parameters of Kochanek-Bertels method. Which is the special case of Kochanek-Bertels method when its parameters are set to 0? (Assume there is one tangent per control point).

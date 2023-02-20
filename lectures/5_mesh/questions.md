@@ -1,4 +1,20 @@
 
+## Exam questions
+---
+* What winding order of polygon vertices determines?
+* Shortly explain geometry part and topology part of shape representation.
+* What are two main phases of subdivision surface methods? Why are they useful? Name two popular subdivision schemes.
+* Which parameters adaptive tessellation takes in account for creating new triangles?
+* What is the cause of aliasing when rendering triangle meshes?
+* What are vertex attributes? Name few.
+* Explain barycentric and bilinear interpolation.
+* Shortly describe Gourad and Phong shading.
+* What is Lambert's (Cosine) law?
+* What is the difference between shared vertex representation and explicit face representation?
+
+
+## Exercise questions
+---
 * What winding order of polygon vertices determines?
 * How does polygon mesh approximates object shape? Under which assumption this holds?
 * What are some good properties of triangle meshes?

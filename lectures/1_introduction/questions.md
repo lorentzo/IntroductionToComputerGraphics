@@ -1,4 +1,11 @@
 
+## Exam questions:
+---
+* Shortly explain rasterization-based rendering. Why is it called object-centric approach?
+* Shortly explain ray-tracing based rendering. Why is it called image-centric approach?
+
+## Exercise questions:
+---
 * What is the goal of computer graphics?
 * When talking about image generation, which are three main pillars we have to consider?
 * Which are two main practical rendering approaches? 
