@@ -119,7 +119,14 @@ Foundational elements of 3D scene:
 
 [Light lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/9_light)
 
+[Light lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/9_light)
+
 ### 10. Camera
+
+* Real camera system
+* Image formation
+* Pinhole camera model
+* Virtual pinhole camera
 
 [Camera lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/10_camera)
 
