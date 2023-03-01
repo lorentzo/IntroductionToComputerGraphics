@@ -18,6 +18,9 @@
   * Exam date reminder: 29.3.2023., 16h, Raum 136.1B
   * Project reminder: 8.4.2023.
 
+* 1.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/5_news_1_3_2023)
+  * height maps, texture atlas, ptex, camera lens
+
 ## Lectures
 
 ### 1. Introduction
