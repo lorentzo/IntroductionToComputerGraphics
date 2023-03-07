@@ -21,6 +21,9 @@
 * 1.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/5_news_1_3_2023)
   * height maps, texture atlas, ptex, camera lens
 
+* 8.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/6_news_8_3_2023)
+  * perspective problems, XYZ colorspace
+
 ## Lectures
 
 ### 1. Introduction
@@ -133,11 +136,26 @@ Foundational elements of 3D scene:
 
 [Camera lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/10_camera)
 
+[Camera lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/10_camera)
+
 ### 11. Rendering overview
+
+* Rendering big picture
+* Practical rendering
+  * Ray-tracing
+  * Rasterization
+* Intuition via ray-tracing
 
 [Rendering overview lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/11_rendering_overview)
 
+
 ### 12. Rendering: ray-tracing
+
+* Ray-tracing overview
+* Camera rays
+* Intersections (visibility)
+* Shading
+* Light transport
 
 [Rendering: ray-tracing lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/12_rendering_raytracing)
 
