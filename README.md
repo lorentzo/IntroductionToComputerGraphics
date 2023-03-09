@@ -148,6 +148,8 @@ Foundational elements of 3D scene:
 
 [Rendering overview lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/11_rendering_overview)
 
+[Rendering overview lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/11_rendering_overview)
+
 
 ### 12. Rendering: ray-tracing
 
