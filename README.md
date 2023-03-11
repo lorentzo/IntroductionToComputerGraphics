@@ -1,3 +1,11 @@
+## About:
+
+Introduction to Computer Graphics course made for DHBW, Mannheim, 2023.
+
+This course is mostly based on:
+* Scratchapixel: https://www.scratchapixel.com/
+* PBRT: https://pbrt.org/
+* Real-Time-Rendering Book: https://www.realtimerendering.com/
 
 ## News and updates:
 
@@ -163,23 +171,32 @@ Foundational elements of 3D scene:
 
 ### 13. Rendering: rasterization
 
+* Rasterization: the visibility solution core
+* Graphics rendering pipeline: using rasterization for rendering
+* Graphics rendering pipeline: logical GPU model, API
+
 [Rendering: rasterization lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/13_rendering_rasterization)
 
 ### 14. Image
 [Image lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/14_image)
 
-### 15. Animation
+### 15. Animation (Optional)
 
-* Keyframing (manual)
-* Procedural
+* Traditional animation in computer graphics
+* Procedural animation
   * Physically-based
   * Empirical
 
-### Advanced topics
+### Advanced topics (Optional)
 
 [More on 3D scene](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/15_more_3d_scene)
+* Voxels
 
 [More on rendering](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/16_more_rendering)
+* Light transport for global illumination:
+  * Monte-Carlo ray-tracing: path-tracing, bidirectional path-tracing, metropolis light transport, importance sampling, light sampling, BRDF sampling
+  * Finite elements methods: radiosity
+* Light transport for volumetric media: participating media and sub-surface-scattering
 
 [More on image](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/17_more_images)
 
