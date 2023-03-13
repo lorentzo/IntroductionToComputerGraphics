@@ -173,6 +173,8 @@ Foundational elements of 3D scene:
 
 [Rendering: ray-tracing lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/12_rendering_raytracing)
 
+[Rendering: ray-tracing lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/12_rendering_raytracing)
+
 ### 13. Rendering: rasterization
 
 * Rasterization: the visibility solution core
