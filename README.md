@@ -183,6 +183,8 @@ Foundational elements of 3D scene:
 
 [Rendering: rasterization lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/13_rendering_rasterization)
 
+[Rendering: rasterization lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/13_rendering_rasterization)
+
 ### 14. Image
 [Image lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/14_image)
 
