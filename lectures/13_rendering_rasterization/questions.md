@@ -4,7 +4,7 @@
 * Shortly describe the projection stage and rasterization stage for visibility solving and explain where and how are color and depth buffers used.
 * What happens to (x,y,z) vertex coordinates while transforming from camera to screen space?
 * Explain the inside-outside test used during triangle rasterization.
-* How can vertex depth value be computed for arbitrary pixel overlapping the triangle?
+* How can depth value be computed for arbitrary pixel overlapping the triangle?
 * Name and shortly describe 4 main stages of the graphics rendering pipeline.
 * Shortly describe the model and view transform used in the vertex shading stage.
 * How is general perspective projection defined? What is its purpose?
@@ -32,7 +32,7 @@
 * For what is the inside-outside test used during triangle rasterization?
 * Shortly explain the edge function and how it is used for the inside-outside test.
 * What is the connection between barycentric coordinates and edge function?
-* How can vertex depth value be computed for arbitrary pixel overlapping the triangle?
+* How can depth value be computed for arbitrary pixel overlapping the triangle?
 * Shortly explain perspective correct interpolation.
 * How can vertex attributes be computed for arbitrary pixel overlapping the triangle?
 * What is the task of the graphics rendering pipeline?
