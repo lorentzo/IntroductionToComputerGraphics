@@ -36,6 +36,11 @@ This course is mostly based on:
 * 8.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/6_news_8_3_2023)
   * perspective problems, XYZ colorspace
 
+* 22.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/7_22_3_2023)
+  * Lecture evaluation
+  * Exam reminder: 29.3.2023., 16h, Raum 136.1B
+  * Project reminder: 8.4.2023., 23:59h
+
 ## Lectures
 
 ### 1. Introduction
