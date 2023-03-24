@@ -191,6 +191,12 @@ Foundational elements of 3D scene:
 [Rendering: rasterization lecture questions](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/13_rendering_rasterization)
 
 ### 14. Image
+
+* Image-space effects
+* Displaying and storing images
+* Aliasing and anti-aliasing
+* Limitations of display device
+
 [Image lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/14_image)
 
 ### 15. Animation (Optional)
