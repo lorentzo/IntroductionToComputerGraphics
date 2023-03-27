@@ -219,6 +219,13 @@ Foundational elements of 3D scene:
 
 [More on image](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/17_more_images)
 
+### Outro
+
+* Review
+* Where to next?
+
+[Outro presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/outro)
+
 
 ## Projects
 
