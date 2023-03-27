@@ -193,9 +193,9 @@ Foundational elements of 3D scene:
 ### 14. Image
 
 * Image-space effects
-* Displaying and storing images
+* Digital imagery
 * Aliasing and anti-aliasing
-* Limitations of display device
+* Scene to screen
 
 [Image lecture presentation](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/lectures/14_image)
 
