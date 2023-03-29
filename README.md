@@ -41,6 +41,10 @@ This course is mostly based on:
   * Exam reminder: 29.3.2023., 16h, Raum 136.1B
   * Project reminder: 8.4.2023., 23:59h
 
+* 29.3.2023. [document](https://github.com/lorentzo/IntroductionToComputerGraphics/tree/main/news/8_29_3_2023)
+  * Clipping, look at transform, hair modeling
+  * Project reminder: 8.4.2023., 23:59h
+
 ## Lectures
 
 ### 1. Introduction
