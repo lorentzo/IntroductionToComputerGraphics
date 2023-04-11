@@ -1,13 +1,33 @@
 ## About:
 
-Introduction to Computer Graphics course made for DHBW, Mannheim, 2023.
+Introduction to Computer Graphics course made for DHBW, Mannheim, Winter/Spring 2023.
 
 This course is mostly based on:
 * Scratchapixel: https://www.scratchapixel.com/
 * PBRT: https://pbrt.org/
 * Real-Time-Rendering Book: https://www.realtimerendering.com/
 
-## News and updates:
+## Amazing projects done by students
+
+* Ray-tracing with GLTF support using Rust: https://github.com/precompiledB/rei
+![](img_outstanding_students/lp_kestrel.png)
+* Blender modeling, animation and rendering: https://drive.google.com/drive/folders/1GCEoIqOUJ-KyT1ON3Yw87Xno3CoE5PDo
+![](img_outstanding_students/6_floating_island_UV_to_close.png)
+* Blender modeling, animation and rendering: https://github.com/Sandario/VaseOnTable
+![](img_outstanding_students/0031.png)
+* Ray-tracing in Rust with CLI and configuration support: https://github.com/0x6e66/raytracer
+![](img_outstanding_students/max-depth-16.png)
+* Ray-tracing: https://github.com/Code-Addiction/Project_Raytracing_Renderer
+![](img_outstanding_students/step10.png)
+* Ray-tracing: https://gitlab.com/simon-sp/raytracing
+![](img_outstanding_students/i9.png)
+* Ray-tracing: https://github.com/EinePriseCode/Rendering
+![](img_outstanding_students/image10-2.png)
+* 2.5D rendering engine with features: https://github.com/0x7477/2.5D-Engine
+* Blender modeling: https://drive.google.com/drive/folders/15nLf2M1pDCEnkyPPuoP1sZsRVdAYcbPG
+![](img_outstanding_students/finalrenderballroom.jpeg)
+
+## News and updates for lectures:
 
 **Exam:** 29.3.2023., 16h, Raum 136.1B
 
